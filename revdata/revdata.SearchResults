@@ -1,0 +1,5 @@
+---- _delay_ms Matches (4 in 3 files) ----
+Main.c:	_delay_ms(5);		// delay. NECESSARY!!!
+Packet.c (applib):	_delay_ms(5);	// delay. NECESSARY!!!
+Stepmotor.c (applib):	//	_delay_ms(STPULSEWIDE);
+Stepmotor.c (applib):	//	_delay_ms(STPULSEWIDE);

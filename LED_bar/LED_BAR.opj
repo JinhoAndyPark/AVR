@@ -1,0 +1,122 @@
+(ExpressProject "LED_BAR"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\library1.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\led_bar.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Netlist_TAB "8")
+    (OTHER_Part_Value "{Value}")
+    (OTHER_Netlist_File "LED_BAR.asc")
+    (OTHER_Netlist_File2 "LED_BAR.CMP")
+    (OTHER_View_Output "FALSE")
+    (OTHER_View_Output2 "FALSE")
+    (OTHER_Formatter "pads2k.dll")
+    (OTHER_PCB_Footprint "{PCB Footprint}")
+    (OTHER_Switch0 "FALSE")
+    (OTHER_Switch1 "FALSE")
+    (OTHER_Switch2 "FALSE")
+    (OTHER_Switch3 "FALSE")
+    (OTHER_Switch4 "FALSE")
+    (OTHER_Switch5 "FALSE")
+    (OTHER_Switch6 "FALSE"))
+  (Folder "Outputs"
+    (File ".\led_bar.asc"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    (CON3
+      (FullPartName "CON3.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (WSH138
+      (FullPartName "WSH138.Normal")
+      (LibraryName "C:\PRJ\LED_BAR\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (CON6
+      (FullPartName "CON6.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("CAP NP"
+      (FullPartName "CAP NP.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (CON2
+      (FullPartName "CON2.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("SW KEY-SPST"
+      (FullPartName "SW KEY-SPST.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("SW PUSHBUTTON"
+      (FullPartName "SW PUSHBUTTON.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("SW DIP-4"
+      (FullPartName "SW DIP-4.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (RGB_LED
+      (FullPartName "RGB_LED.Normal")
+      (LibraryName "C:\PRJ\LED_BAR\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (atmega2560
+      (FullPartName "atmega2560.Normal")
+      (LibraryName "C:\PRJ\LED_BAR\LIBRARY1.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "C:\Prj\LED_bar")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "C:\Prj\LED_bar\led_bar.dsn")
+      (Path "Design Resources" "C:\Prj\LED_bar\led_bar.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 0 200 0 404"))
+      (Tab 0))
+    (Doc
+      (Type "TextFile")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 66 1099 66 501"))
+      (Path "C:\Prj\LED_bar\led_bar.asc")
+      (Scroll "0"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -4 -23 22 1051 22 453")
+        (Scroll "-136 -5")
+        (Zoom "61")
+        (Occurrence "/"))
+      (Path "C:\PRJ\LED_BAR\LED_BAR.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "Administrator")
+  (ISPCBBASICLICENSE "false"))

@@ -1,0 +1,190 @@
+
+timer64.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000de  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000002  00800060  000000de  00000172  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000002  00800062  00800062  00000174  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  00000174  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000085  00000000  00000000  00000840  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000020  00000000  00000000  000008c5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 0000003c  00000000  00000000  000008e5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   000000d5  00000000  00000000  00000921  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000000a7  00000000  00000000  000009f6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   0000014d  00000000  00000000  00000a9d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000030  00000000  00000000  00000bec  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    0000007f  00000000  00000000  00000c1c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_pubtypes 0000001e  00000000  00000000  00000c9b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	14 c0       	rjmp	.+40     	; 0x2a <__ctors_end>
+   2:	2e c0       	rjmp	.+92     	; 0x60 <__bad_interrupt>
+   4:	2d c0       	rjmp	.+90     	; 0x60 <__bad_interrupt>
+   6:	2c c0       	rjmp	.+88     	; 0x60 <__bad_interrupt>
+   8:	2b c0       	rjmp	.+86     	; 0x60 <__bad_interrupt>
+   a:	2a c0       	rjmp	.+84     	; 0x60 <__bad_interrupt>
+   c:	29 c0       	rjmp	.+82     	; 0x60 <__bad_interrupt>
+   e:	28 c0       	rjmp	.+80     	; 0x60 <__bad_interrupt>
+  10:	27 c0       	rjmp	.+78     	; 0x60 <__bad_interrupt>
+  12:	27 c0       	rjmp	.+78     	; 0x62 <__vector_9>
+  14:	25 c0       	rjmp	.+74     	; 0x60 <__bad_interrupt>
+  16:	24 c0       	rjmp	.+72     	; 0x60 <__bad_interrupt>
+  18:	23 c0       	rjmp	.+70     	; 0x60 <__bad_interrupt>
+  1a:	22 c0       	rjmp	.+68     	; 0x60 <__bad_interrupt>
+  1c:	21 c0       	rjmp	.+66     	; 0x60 <__bad_interrupt>
+  1e:	20 c0       	rjmp	.+64     	; 0x60 <__bad_interrupt>
+  20:	1f c0       	rjmp	.+62     	; 0x60 <__bad_interrupt>
+  22:	1e c0       	rjmp	.+60     	; 0x60 <__bad_interrupt>
+  24:	1d c0       	rjmp	.+58     	; 0x60 <__bad_interrupt>
+  26:	1c c0       	rjmp	.+56     	; 0x60 <__bad_interrupt>
+  28:	1b c0       	rjmp	.+54     	; 0x60 <__bad_interrupt>
+
+0000002a <__ctors_end>:
+  2a:	11 24       	eor	r1, r1
+  2c:	1f be       	out	0x3f, r1	; 63
+  2e:	cf e5       	ldi	r28, 0x5F	; 95
+  30:	d2 e0       	ldi	r29, 0x02	; 2
+  32:	de bf       	out	0x3e, r29	; 62
+  34:	cd bf       	out	0x3d, r28	; 61
+
+00000036 <__do_copy_data>:
+  36:	10 e0       	ldi	r17, 0x00	; 0
+  38:	a0 e6       	ldi	r26, 0x60	; 96
+  3a:	b0 e0       	ldi	r27, 0x00	; 0
+  3c:	ee ed       	ldi	r30, 0xDE	; 222
+  3e:	f0 e0       	ldi	r31, 0x00	; 0
+  40:	02 c0       	rjmp	.+4      	; 0x46 <__SREG__+0x7>
+  42:	05 90       	lpm	r0, Z+
+  44:	0d 92       	st	X+, r0
+  46:	a2 36       	cpi	r26, 0x62	; 98
+  48:	b1 07       	cpc	r27, r17
+  4a:	d9 f7       	brne	.-10     	; 0x42 <__SREG__+0x3>
+
+0000004c <__do_clear_bss>:
+  4c:	10 e0       	ldi	r17, 0x00	; 0
+  4e:	a2 e6       	ldi	r26, 0x62	; 98
+  50:	b0 e0       	ldi	r27, 0x00	; 0
+  52:	01 c0       	rjmp	.+2      	; 0x56 <.do_clear_bss_start>
+
+00000054 <.do_clear_bss_loop>:
+  54:	1d 92       	st	X+, r1
+
+00000056 <.do_clear_bss_start>:
+  56:	a4 36       	cpi	r26, 0x64	; 100
+  58:	b1 07       	cpc	r27, r17
+  5a:	e1 f7       	brne	.-8      	; 0x54 <.do_clear_bss_loop>
+  5c:	33 d0       	rcall	.+102    	; 0xc4 <main>
+  5e:	3d c0       	rjmp	.+122    	; 0xda <_exit>
+
+00000060 <__bad_interrupt>:
+  60:	cf cf       	rjmp	.-98     	; 0x0 <__vectors>
+
+00000062 <__vector_9>:
+
+unsigned char LED = 0xfe;
+unsigned int COUNT = 0;
+
+SIGNAL(SIG_OVERFLOW0)	//64분주 - 0.0004초마다 
+{
+  62:	1f 92       	push	r1
+  64:	0f 92       	push	r0
+  66:	0f b6       	in	r0, 0x3f	; 63
+  68:	0f 92       	push	r0
+  6a:	11 24       	eor	r1, r1
+  6c:	2f 93       	push	r18
+  6e:	8f 93       	push	r24
+  70:	9f 93       	push	r25
+	COUNT++;
+  72:	80 91 62 00 	lds	r24, 0x0062
+  76:	90 91 63 00 	lds	r25, 0x0063
+  7a:	01 96       	adiw	r24, 0x01	; 1
+  7c:	90 93 63 00 	sts	0x0063, r25
+  80:	80 93 62 00 	sts	0x0062, r24
+
+	if(COUNT == 2500)	//64분주 1초 0.0004*2500 = 1초 
+  84:	29 e0       	ldi	r18, 0x09	; 9
+  86:	84 3c       	cpi	r24, 0xC4	; 196
+  88:	92 07       	cpc	r25, r18
+  8a:	91 f4       	brne	.+36     	; 0xb0 <__vector_9+0x4e>
+	{
+		if(LED == 0xff) 
+  8c:	80 91 60 00 	lds	r24, 0x0060
+  90:	8f 3f       	cpi	r24, 0xFF	; 255
+  92:	19 f4       	brne	.+6      	; 0x9a <__vector_9+0x38>
+		LED = 0xfe;
+  94:	8e ef       	ldi	r24, 0xFE	; 254
+  96:	80 93 60 00 	sts	0x0060, r24
+
+		PORTC = LED;
+  9a:	80 91 60 00 	lds	r24, 0x0060
+  9e:	85 bb       	out	0x15, r24	; 21
+		LED <<= 1;	//led이동
+  a0:	88 0f       	add	r24, r24
+		LED |= 0x01;//led이동
+  a2:	81 60       	ori	r24, 0x01	; 1
+  a4:	80 93 60 00 	sts	0x0060, r24
+		COUNT = 0;	//count초기화
+  a8:	10 92 63 00 	sts	0x0063, r1
+  ac:	10 92 62 00 	sts	0x0062, r1
+	}
+    TCNT0=155;	//tcnt초기화
+  b0:	8b e9       	ldi	r24, 0x9B	; 155
+  b2:	82 bf       	out	0x32, r24	; 50
+
+}
+  b4:	9f 91       	pop	r25
+  b6:	8f 91       	pop	r24
+  b8:	2f 91       	pop	r18
+  ba:	0f 90       	pop	r0
+  bc:	0f be       	out	0x3f, r0	; 63
+  be:	0f 90       	pop	r0
+  c0:	1f 90       	pop	r1
+  c2:	18 95       	reti
+
+000000c4 <main>:
+
+int main(void)
+{
+	DDRC = 0xff;
+  c4:	8f ef       	ldi	r24, 0xFF	; 255
+  c6:	84 bb       	out	0x14, r24	; 20
+	PORTC = 0x00;
+  c8:	15 ba       	out	0x15, r1	; 21
+
+
+	TCCR0 = 0x03;		//64분주	0.000004s 
+  ca:	83 e0       	ldi	r24, 0x03	; 3
+  cc:	83 bf       	out	0x33, r24	; 51
+	TCNT0 = 155; 	//255-155=100   100*0.000004 =0.0004	
+  ce:	8b e9       	ldi	r24, 0x9B	; 155
+  d0:	82 bf       	out	0x32, r24	; 50
+
+	TIMSK = 0x01;	//타이머인터럽트set
+  d2:	81 e0       	ldi	r24, 0x01	; 1
+  d4:	89 bf       	out	0x39, r24	; 57
+
+	sei();	//전체인터럽트 SET
+  d6:	78 94       	sei
+  d8:	ff cf       	rjmp	.-2      	; 0xd8 <main+0x14>
+
+000000da <_exit>:
+  da:	f8 94       	cli
+
+000000dc <__stop_program>:
+  dc:	ff cf       	rjmp	.-2      	; 0xdc <__stop_program>

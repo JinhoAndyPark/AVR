@@ -1,0 +1,293 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'STMODE'
+Slack : -46.638
+TNS   : -1271.026
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -21.617
+TNS   : -745.437
+
+Type  : Slow 1200mV 85C Model Setup 'mSELECT'
+Slack : -20.250
+TNS   : -318.846
+
+Type  : Slow 1200mV 85C Model Setup 'setflag'
+Slack : -5.781
+TNS   : -178.331
+
+Type  : Slow 1200mV 85C Model Setup 'sVALUE'
+Slack : -3.929
+TNS   : -161.247
+
+Type  : Slow 1200mV 85C Model Setup 'mENTER'
+Slack : -1.397
+TNS   : -77.050
+
+Type  : Slow 1200mV 85C Model Hold 'STMODE'
+Slack : -2.241
+TNS   : -78.363
+
+Type  : Slow 1200mV 85C Model Hold 'sVALUE'
+Slack : -0.763
+TNS   : -7.974
+
+Type  : Slow 1200mV 85C Model Hold 'setflag'
+Slack : -0.425
+TNS   : -0.892
+
+Type  : Slow 1200mV 85C Model Hold 'mSELECT'
+Slack : -0.237
+TNS   : -0.237
+
+Type  : Slow 1200mV 85C Model Hold 'mENTER'
+Slack : -0.043
+TNS   : -0.043
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.524
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -1.306
+TNS   : -29.955
+
+Type  : Slow 1200mV 85C Model Recovery 'mSELECT'
+Slack : -0.385
+TNS   : -8.977
+
+Type  : Slow 1200mV 85C Model Recovery 'mENTER'
+Slack : -0.274
+TNS   : -0.274
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : -0.395
+TNS   : -2.351
+
+Type  : Slow 1200mV 85C Model Removal 'mSELECT'
+Slack : -0.158
+TNS   : -0.490
+
+Type  : Slow 1200mV 85C Model Removal 'mENTER'
+Slack : 0.927
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -92.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mENTER'
+Slack : -3.000
+TNS   : -79.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mSELECT'
+Slack : -3.000
+TNS   : -62.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sVALUE'
+Slack : -3.000
+TNS   : -58.342
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'STMODE'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'setflag'
+Slack : -0.259
+TNS   : -13.227
+
+Type  : Slow 1200mV 0C Model Setup 'STMODE'
+Slack : -41.621
+TNS   : -1123.859
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -19.361
+TNS   : -663.561
+
+Type  : Slow 1200mV 0C Model Setup 'mSELECT'
+Slack : -18.056
+TNS   : -278.154
+
+Type  : Slow 1200mV 0C Model Setup 'setflag'
+Slack : -5.163
+TNS   : -161.893
+
+Type  : Slow 1200mV 0C Model Setup 'sVALUE'
+Slack : -3.412
+TNS   : -139.150
+
+Type  : Slow 1200mV 0C Model Setup 'mENTER'
+Slack : -1.157
+TNS   : -62.152
+
+Type  : Slow 1200mV 0C Model Hold 'STMODE'
+Slack : -2.037
+TNS   : -70.306
+
+Type  : Slow 1200mV 0C Model Hold 'sVALUE'
+Slack : -0.774
+TNS   : -7.681
+
+Type  : Slow 1200mV 0C Model Hold 'setflag'
+Slack : -0.276
+TNS   : -0.546
+
+Type  : Slow 1200mV 0C Model Hold 'mSELECT'
+Slack : -0.239
+TNS   : -0.239
+
+Type  : Slow 1200mV 0C Model Hold 'mENTER'
+Slack : -0.047
+TNS   : -0.047
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -1.132
+TNS   : -21.746
+
+Type  : Slow 1200mV 0C Model Recovery 'mSELECT'
+Slack : -0.262
+TNS   : -4.343
+
+Type  : Slow 1200mV 0C Model Recovery 'mENTER'
+Slack : -0.143
+TNS   : -0.143
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : -0.459
+TNS   : -2.722
+
+Type  : Slow 1200mV 0C Model Removal 'mSELECT'
+Slack : -0.142
+TNS   : -0.455
+
+Type  : Slow 1200mV 0C Model Removal 'mENTER'
+Slack : 0.828
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -92.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mENTER'
+Slack : -3.000
+TNS   : -79.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mSELECT'
+Slack : -3.000
+TNS   : -62.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sVALUE'
+Slack : -3.000
+TNS   : -49.003
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'STMODE'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'setflag'
+Slack : -0.190
+TNS   : -9.121
+
+Type  : Fast 1200mV 0C Model Setup 'STMODE'
+Slack : -25.829
+TNS   : -602.953
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -12.380
+TNS   : -412.232
+
+Type  : Fast 1200mV 0C Model Setup 'mSELECT'
+Slack : -11.668
+TNS   : -175.240
+
+Type  : Fast 1200mV 0C Model Setup 'setflag'
+Slack : -2.722
+TNS   : -83.964
+
+Type  : Fast 1200mV 0C Model Setup 'sVALUE'
+Slack : -2.051
+TNS   : -84.539
+
+Type  : Fast 1200mV 0C Model Setup 'mENTER'
+Slack : -0.774
+TNS   : -45.994
+
+Type  : Fast 1200mV 0C Model Hold 'STMODE'
+Slack : -1.360
+TNS   : -57.068
+
+Type  : Fast 1200mV 0C Model Hold 'sVALUE'
+Slack : -0.762
+TNS   : -9.788
+
+Type  : Fast 1200mV 0C Model Hold 'setflag'
+Slack : -0.343
+TNS   : -0.602
+
+Type  : Fast 1200mV 0C Model Hold 'mSELECT'
+Slack : -0.159
+TNS   : -0.159
+
+Type  : Fast 1200mV 0C Model Hold 'mENTER'
+Slack : -0.050
+TNS   : -0.050
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.216
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'mSELECT'
+Slack : -0.404
+TNS   : -13.757
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -0.337
+TNS   : -4.160
+
+Type  : Fast 1200mV 0C Model Recovery 'mENTER'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : -0.269
+TNS   : -1.485
+
+Type  : Fast 1200mV 0C Model Removal 'mSELECT'
+Slack : -0.099
+TNS   : -0.425
+
+Type  : Fast 1200mV 0C Model Removal 'mENTER'
+Slack : 0.519
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -96.759
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mENTER'
+Slack : -3.000
+TNS   : -93.535
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mSELECT'
+Slack : -3.000
+TNS   : -70.337
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sVALUE'
+Slack : -3.000
+TNS   : -34.343
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'STMODE'
+Slack : -3.000
+TNS   : -25.509
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'setflag'
+Slack : -0.083
+TNS   : -2.062
+
+------------------------------------------------------------

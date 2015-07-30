@@ -1,0 +1,710 @@
+
+Xbee_master.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000003ea  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          0000000b  00800100  00800100  0000045e  2**0
+                  ALLOC
+  2 .debug_aranges 00000060  00000000  00000000  0000045e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 00000137  00000000  00000000  000004be  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   000003e1  00000000  00000000  000005f5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 00000208  00000000  00000000  000009d6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   0000045f  00000000  00000000  00000bde  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  000000d0  00000000  00000000  00001040  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00000176  00000000  00000000  00001110  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    000000ef  00000000  00000000  00001286  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+   8:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+   c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  10:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  14:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  18:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  1c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  20:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  24:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  28:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  2c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  30:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  34:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  38:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  3c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  40:	0c 94 d5 00 	jmp	0x1aa	; 0x1aa <__vector_16>
+  44:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  48:	0c 94 67 00 	jmp	0xce	; 0xce <__vector_18>
+  4c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  50:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  54:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  58:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  5c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  60:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  64:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  68:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  6c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  70:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  74:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  78:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  7c:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  80:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  84:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+  88:	0c 94 65 00 	jmp	0xca	; 0xca <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ea ee       	ldi	r30, 0xEA	; 234
+  a0:	f3 e0       	ldi	r31, 0x03	; 3
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a0 30       	cpi	r26, 0x00	; 0
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	11 e0       	ldi	r17, 0x01	; 1
+  b4:	a0 e0       	ldi	r26, 0x00	; 0
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	ab 30       	cpi	r26, 0x0B	; 11
+  be:	b1 07       	cpc	r27, r17
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	0e 94 56 01 	call	0x2ac	; 0x2ac <main>
+  c6:	0c 94 ce 01 	jmp	0x39c	; 0x39c <exit>
+
+000000ca <__bad_interrupt>:
+  ca:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000ce <__vector_18>:
+	}
+	
+}
+
+ISR(USART0_RX_vect)
+{
+  ce:	1f 92       	push	r1
+  d0:	0f 92       	push	r0
+  d2:	0f b6       	in	r0, 0x3f	; 63
+  d4:	0f 92       	push	r0
+  d6:	11 24       	eor	r1, r1
+  d8:	8f 93       	push	r24
+  da:	9f 93       	push	r25
+	U08 data;
+	
+	Disable_ISR();
+  dc:	8f b7       	in	r24, 0x3f	; 63
+  de:	8f 77       	andi	r24, 0x7F	; 127
+  e0:	8f bf       	out	0x3f, r24	; 63
+
+	data = UDR0;
+  e2:	8c b1       	in	r24, 0x0c	; 12
+
+	if(IDflag == 1)
+  e4:	90 91 00 01 	lds	r25, 0x0100
+  e8:	91 30       	cpi	r25, 0x01	; 1
+  ea:	e1 f4       	brne	.+56     	; 0x124 <__vector_18+0x56>
+	{
+		IDflag = 0;
+  ec:	10 92 00 01 	sts	0x0100, r1
+		nID = data;
+  f0:	80 93 01 01 	sts	0x0101, r24
+
+		if(nID == '1')
+  f4:	81 33       	cpi	r24, 0x31	; 49
+  f6:	31 f4       	brne	.+12     	; 0x104 <__vector_18+0x36>
+		{
+			sbi(PORTC,3);
+  f8:	ab 9a       	sbi	0x15, 3	; 21
+			state1st = SLAVE1stON;
+  fa:	90 93 0a 01 	sts	0x010A, r25
+			CNT1st = 0;
+  fe:	10 92 05 01 	sts	0x0105, r1
+ 102:	19 c0       	rjmp	.+50     	; 0x136 <__vector_18+0x68>
+		}
+		else if(nID == '2')
+ 104:	82 33       	cpi	r24, 0x32	; 50
+ 106:	31 f4       	brne	.+12     	; 0x114 <__vector_18+0x46>
+		{
+			sbi(PORTC,4);
+ 108:	ac 9a       	sbi	0x15, 4	; 21
+			state2nd = SLAVE2ndON;
+ 10a:	90 93 09 01 	sts	0x0109, r25
+			CNT2nd = 0; 
+ 10e:	10 92 08 01 	sts	0x0108, r1
+ 112:	11 c0       	rjmp	.+34     	; 0x136 <__vector_18+0x68>
+		}
+		else if(nID == '3')
+ 114:	83 33       	cpi	r24, 0x33	; 51
+ 116:	31 f4       	brne	.+12     	; 0x124 <__vector_18+0x56>
+		{
+			sbi(PORTC,5);
+ 118:	ad 9a       	sbi	0x15, 5	; 21
+			state3th = SLAVE3thON;
+ 11a:	90 93 04 01 	sts	0x0104, r25
+			CNT3th = 0;
+ 11e:	10 92 06 01 	sts	0x0106, r1
+ 122:	09 c0       	rjmp	.+18     	; 0x136 <__vector_18+0x68>
+		}
+	}
+
+	if((data=='@') && (IDflag==0))	IDflag = 1;
+ 124:	80 34       	cpi	r24, 0x40	; 64
+ 126:	39 f4       	brne	.+14     	; 0x136 <__vector_18+0x68>
+ 128:	80 91 00 01 	lds	r24, 0x0100
+ 12c:	88 23       	and	r24, r24
+ 12e:	19 f4       	brne	.+6      	; 0x136 <__vector_18+0x68>
+ 130:	81 e0       	ldi	r24, 0x01	; 1
+ 132:	80 93 00 01 	sts	0x0100, r24
+	
+	Enable_ISR();
+ 136:	8f b7       	in	r24, 0x3f	; 63
+ 138:	80 68       	ori	r24, 0x80	; 128
+ 13a:	8f bf       	out	0x3f, r24	; 63
+}
+ 13c:	9f 91       	pop	r25
+ 13e:	8f 91       	pop	r24
+ 140:	0f 90       	pop	r0
+ 142:	0f be       	out	0x3f, r0	; 63
+ 144:	0f 90       	pop	r0
+ 146:	1f 90       	pop	r1
+ 148:	18 95       	reti
+
+0000014a <ServerTxD>:
+
+
+void ServerTxD(unsigned char* packet, int len)
+{
+ 14a:	ac 01       	movw	r20, r24
+ 14c:	20 e0       	ldi	r18, 0x00	; 0
+ 14e:	30 e0       	ldi	r19, 0x00	; 0
+ 150:	0c c0       	rjmp	.+24     	; 0x16a <ServerTxD+0x20>
+	int cnt;
+
+	for(cnt = 0; cnt < len ; cnt++)
+	{
+		while(!( UCSR1A & (1<<UDRE1)));
+ 152:	80 91 9b 00 	lds	r24, 0x009B
+ 156:	85 ff       	sbrs	r24, 5
+ 158:	fc cf       	rjmp	.-8      	; 0x152 <ServerTxD+0x8>
+		UDR1 = packet[cnt];
+ 15a:	fa 01       	movw	r30, r20
+ 15c:	e2 0f       	add	r30, r18
+ 15e:	f3 1f       	adc	r31, r19
+ 160:	80 81       	ld	r24, Z
+ 162:	80 93 9c 00 	sts	0x009C, r24
+
+void ServerTxD(unsigned char* packet, int len)
+{
+	int cnt;
+
+	for(cnt = 0; cnt < len ; cnt++)
+ 166:	2f 5f       	subi	r18, 0xFF	; 255
+ 168:	3f 4f       	sbci	r19, 0xFF	; 255
+ 16a:	26 17       	cp	r18, r22
+ 16c:	37 07       	cpc	r19, r23
+ 16e:	8c f3       	brlt	.-30     	; 0x152 <ServerTxD+0x8>
+	{
+		while(!( UCSR1A & (1<<UDRE1)));
+		UDR1 = packet[cnt];
+	}
+}
+ 170:	08 95       	ret
+
+00000172 <Master2Server>:
+
+void Master2Server( U08 ID_1, U08 ID_2, U08 ID_3 )
+{
+ 172:	df 93       	push	r29
+ 174:	cf 93       	push	r28
+ 176:	00 d0       	rcall	.+0      	; 0x178 <Master2Server+0x6>
+ 178:	00 d0       	rcall	.+0      	; 0x17a <Master2Server+0x8>
+ 17a:	0f 92       	push	r0
+ 17c:	cd b7       	in	r28, 0x3d	; 61
+ 17e:	de b7       	in	r29, 0x3e	; 62
+	U08 PacketBuffer[5];
+	
+	PacketBuffer[0] = 0xFF;				// Start Code 0xff ID1 ID2 ID3 0xEE
+ 180:	9f ef       	ldi	r25, 0xFF	; 255
+ 182:	99 83       	std	Y+1, r25	; 0x01
+	PacketBuffer[1] = ID_1;		
+ 184:	8a 83       	std	Y+2, r24	; 0x02
+	PacketBuffer[2] = ID_2;				//My ID
+ 186:	6b 83       	std	Y+3, r22	; 0x03
+	PacketBuffer[3] = ID_3;				//Data
+ 188:	4c 83       	std	Y+4, r20	; 0x04
+	PacketBuffer[4] = 0xEE;				// End Code
+ 18a:	8e ee       	ldi	r24, 0xEE	; 238
+ 18c:	8d 83       	std	Y+5, r24	; 0x05
+
+	ServerTxD( PacketBuffer, 5 );
+ 18e:	ce 01       	movw	r24, r28
+ 190:	01 96       	adiw	r24, 0x01	; 1
+ 192:	65 e0       	ldi	r22, 0x05	; 5
+ 194:	70 e0       	ldi	r23, 0x00	; 0
+ 196:	0e 94 a5 00 	call	0x14a	; 0x14a <ServerTxD>
+}
+ 19a:	0f 90       	pop	r0
+ 19c:	0f 90       	pop	r0
+ 19e:	0f 90       	pop	r0
+ 1a0:	0f 90       	pop	r0
+ 1a2:	0f 90       	pop	r0
+ 1a4:	cf 91       	pop	r28
+ 1a6:	df 91       	pop	r29
+ 1a8:	08 95       	ret
+
+000001aa <__vector_16>:
+
+//------------------------------------------------------------------------------
+//                   		=== Interrupt Service Routine ===
+//------------------------------------------------------------------------------
+ISR(TIMER0_OVF_vect)	//1//2ms
+{
+ 1aa:	1f 92       	push	r1
+ 1ac:	0f 92       	push	r0
+ 1ae:	0f b6       	in	r0, 0x3f	; 63
+ 1b0:	0f 92       	push	r0
+ 1b2:	0b b6       	in	r0, 0x3b	; 59
+ 1b4:	0f 92       	push	r0
+ 1b6:	11 24       	eor	r1, r1
+ 1b8:	2f 93       	push	r18
+ 1ba:	3f 93       	push	r19
+ 1bc:	4f 93       	push	r20
+ 1be:	5f 93       	push	r21
+ 1c0:	6f 93       	push	r22
+ 1c2:	7f 93       	push	r23
+ 1c4:	8f 93       	push	r24
+ 1c6:	9f 93       	push	r25
+ 1c8:	af 93       	push	r26
+ 1ca:	bf 93       	push	r27
+ 1cc:	ef 93       	push	r30
+ 1ce:	ff 93       	push	r31
+	TCNT0 = 131;
+ 1d0:	83 e8       	ldi	r24, 0x83	; 131
+ 1d2:	82 bf       	out	0x32, r24	; 50
+	tic_1sec++;
+ 1d4:	80 91 02 01 	lds	r24, 0x0102
+ 1d8:	90 91 03 01 	lds	r25, 0x0103
+ 1dc:	01 96       	adiw	r24, 0x01	; 1
+ 1de:	90 93 03 01 	sts	0x0103, r25
+ 1e2:	80 93 02 01 	sts	0x0102, r24
+	if(tic_1sec >= 500)
+ 1e6:	84 5f       	subi	r24, 0xF4	; 244
+ 1e8:	91 40       	sbci	r25, 0x01	; 1
+ 1ea:	98 f1       	brcs	.+102    	; 0x252 <__vector_16+0xa8>
+	{
+		tic_1sec = 0;
+ 1ec:	10 92 03 01 	sts	0x0103, r1
+ 1f0:	10 92 02 01 	sts	0x0102, r1
+
+		Master2Server( state1st, state2nd, state3th );
+ 1f4:	80 91 0a 01 	lds	r24, 0x010A
+ 1f8:	60 91 09 01 	lds	r22, 0x0109
+ 1fc:	40 91 04 01 	lds	r20, 0x0104
+ 200:	0e 94 b9 00 	call	0x172	; 0x172 <Master2Server>
+
+		if(state1st == SLAVE1stON)
+ 204:	80 91 0a 01 	lds	r24, 0x010A
+ 208:	81 30       	cpi	r24, 0x01	; 1
+ 20a:	49 f4       	brne	.+18     	; 0x21e <__vector_16+0x74>
+		{
+			CNT1st++;
+ 20c:	80 91 05 01 	lds	r24, 0x0105
+ 210:	8f 5f       	subi	r24, 0xFF	; 255
+ 212:	80 93 05 01 	sts	0x0105, r24
+			if(CNT1st > 1)	state1st = SLAVE1stOFF;
+ 216:	82 30       	cpi	r24, 0x02	; 2
+ 218:	10 f0       	brcs	.+4      	; 0x21e <__vector_16+0x74>
+ 21a:	10 92 0a 01 	sts	0x010A, r1
+		}
+		if(state2nd == SLAVE2ndON)
+ 21e:	80 91 09 01 	lds	r24, 0x0109
+ 222:	81 30       	cpi	r24, 0x01	; 1
+ 224:	49 f4       	brne	.+18     	; 0x238 <__vector_16+0x8e>
+		{
+			CNT2nd++;
+ 226:	80 91 08 01 	lds	r24, 0x0108
+ 22a:	8f 5f       	subi	r24, 0xFF	; 255
+ 22c:	80 93 08 01 	sts	0x0108, r24
+			if(CNT2nd > 1)	state2nd = SLAVE2ndOFF;
+ 230:	82 30       	cpi	r24, 0x02	; 2
+ 232:	10 f0       	brcs	.+4      	; 0x238 <__vector_16+0x8e>
+ 234:	10 92 09 01 	sts	0x0109, r1
+		}
+		if(state3th == SLAVE3thON)
+ 238:	80 91 04 01 	lds	r24, 0x0104
+ 23c:	81 30       	cpi	r24, 0x01	; 1
+ 23e:	49 f4       	brne	.+18     	; 0x252 <__vector_16+0xa8>
+		{
+			CNT3th++;
+ 240:	80 91 06 01 	lds	r24, 0x0106
+ 244:	8f 5f       	subi	r24, 0xFF	; 255
+ 246:	80 93 06 01 	sts	0x0106, r24
+			if(CNT3th > 1) state3th = SLAVE3thOFF;
+ 24a:	82 30       	cpi	r24, 0x02	; 2
+ 24c:	10 f0       	brcs	.+4      	; 0x252 <__vector_16+0xa8>
+ 24e:	10 92 04 01 	sts	0x0104, r1
+		}
+	}
+	
+}
+ 252:	ff 91       	pop	r31
+ 254:	ef 91       	pop	r30
+ 256:	bf 91       	pop	r27
+ 258:	af 91       	pop	r26
+ 25a:	9f 91       	pop	r25
+ 25c:	8f 91       	pop	r24
+ 25e:	7f 91       	pop	r23
+ 260:	6f 91       	pop	r22
+ 262:	5f 91       	pop	r21
+ 264:	4f 91       	pop	r20
+ 266:	3f 91       	pop	r19
+ 268:	2f 91       	pop	r18
+ 26a:	0f 90       	pop	r0
+ 26c:	0b be       	out	0x3b, r0	; 59
+ 26e:	0f 90       	pop	r0
+ 270:	0f be       	out	0x3f, r0	; 63
+ 272:	0f 90       	pop	r0
+ 274:	1f 90       	pop	r1
+ 276:	18 95       	reti
+
+00000278 <Init_Main>:
+//------------------------------------------------------------------------------
+//                       	=== Initialize Function ===
+//------------------------------------------------------------------------------
+void Init_Main(void)
+{
+	Disable_ISR();           	// 전체인터럽트 사용금지
+ 278:	8f b7       	in	r24, 0x3f	; 63
+ 27a:	8f 77       	andi	r24, 0x7F	; 127
+ 27c:	8f bf       	out	0x3f, r24	; 63
+
+	Init_Timer();				// 초기화_타이머0/1/2/3
+ 27e:	0e 94 7a 01 	call	0x2f4	; 0x2f4 <Init_Timer>
+    Init_Uart(0,57600);  		// 초기화_시리얼통신0
+ 282:	80 e0       	ldi	r24, 0x00	; 0
+ 284:	40 e0       	ldi	r20, 0x00	; 0
+ 286:	51 ee       	ldi	r21, 0xE1	; 225
+ 288:	60 e0       	ldi	r22, 0x00	; 0
+ 28a:	70 e0       	ldi	r23, 0x00	; 0
+ 28c:	0e 94 88 01 	call	0x310	; 0x310 <Init_Uart>
+	Init_Uart(1,57600);  	// 초기화_시리얼통신1
+ 290:	81 e0       	ldi	r24, 0x01	; 1
+ 292:	40 e0       	ldi	r20, 0x00	; 0
+ 294:	51 ee       	ldi	r21, 0xE1	; 225
+ 296:	60 e0       	ldi	r22, 0x00	; 0
+ 298:	70 e0       	ldi	r23, 0x00	; 0
+ 29a:	0e 94 88 01 	call	0x310	; 0x310 <Init_Uart>
+
+	DDRC = 0xFF;
+ 29e:	8f ef       	ldi	r24, 0xFF	; 255
+ 2a0:	84 bb       	out	0x14, r24	; 20
+	DDRD = 0xFF;
+ 2a2:	81 bb       	out	0x11, r24	; 17
+    
+	Enable_ISR();            	// 전체인터럽트 사용허가
+ 2a4:	8f b7       	in	r24, 0x3f	; 63
+ 2a6:	80 68       	ori	r24, 0x80	; 128
+ 2a8:	8f bf       	out	0x3f, r24	; 63
+}
+ 2aa:	08 95       	ret
+
+000002ac <main>:
+//------------------------------------------------------------------------------
+//                      	=== Main Function ===
+//------------------------------------------------------------------------------
+void main(void)
+{ 
+	Init_Main();		// 초기화_MCU
+ 2ac:	0e 94 3c 01 	call	0x278	; 0x278 <Init_Main>
+	//--------------------------------------------------------------------------
+	//		=== Function Module ===
+	//--------------------------------------------------------------------------
+	
+
+	if(state1st == SLAVE1stON)			sbi(PORTC,0);
+ 2b0:	80 91 0a 01 	lds	r24, 0x010A
+ 2b4:	81 30       	cpi	r24, 0x01	; 1
+ 2b6:	11 f4       	brne	.+4      	; 0x2bc <main+0x10>
+ 2b8:	a8 9a       	sbi	0x15, 0	; 21
+ 2ba:	05 c0       	rjmp	.+10     	; 0x2c6 <main+0x1a>
+	else if(state1st == SLAVE1stOFF)	cbi(PORTC,0);
+ 2bc:	80 91 0a 01 	lds	r24, 0x010A
+ 2c0:	88 23       	and	r24, r24
+ 2c2:	09 f4       	brne	.+2      	; 0x2c6 <main+0x1a>
+ 2c4:	a8 98       	cbi	0x15, 0	; 21
+	
+	if(state2nd == SLAVE2ndON)			sbi(PORTC,1);
+ 2c6:	80 91 09 01 	lds	r24, 0x0109
+ 2ca:	81 30       	cpi	r24, 0x01	; 1
+ 2cc:	11 f4       	brne	.+4      	; 0x2d2 <main+0x26>
+ 2ce:	a9 9a       	sbi	0x15, 1	; 21
+ 2d0:	05 c0       	rjmp	.+10     	; 0x2dc <main+0x30>
+	else if(state1st == SLAVE1stOFF)	cbi(PORTC,1);
+ 2d2:	80 91 0a 01 	lds	r24, 0x010A
+ 2d6:	88 23       	and	r24, r24
+ 2d8:	09 f4       	brne	.+2      	; 0x2dc <main+0x30>
+ 2da:	a9 98       	cbi	0x15, 1	; 21
+	
+	if(state3th == SLAVE3thON)			sbi(PORTC,2);
+ 2dc:	80 91 04 01 	lds	r24, 0x0104
+ 2e0:	81 30       	cpi	r24, 0x01	; 1
+ 2e2:	11 f4       	brne	.+4      	; 0x2e8 <main+0x3c>
+ 2e4:	aa 9a       	sbi	0x15, 2	; 21
+ 2e6:	e4 cf       	rjmp	.-56     	; 0x2b0 <main+0x4>
+	else if(state3th == SLAVE3thOFF) 	cbi(PORTC,2);
+ 2e8:	80 91 04 01 	lds	r24, 0x0104
+ 2ec:	88 23       	and	r24, r24
+ 2ee:	01 f7       	brne	.-64     	; 0x2b0 <main+0x4>
+ 2f0:	aa 98       	cbi	0x15, 2	; 21
+ 2f2:	de cf       	rjmp	.-68     	; 0x2b0 <main+0x4>
+
+000002f4 <Init_Timer>:
+		TCCR0 = ( 1 << WGM01 ) | ( 1 << WGM00 )  | ( 0 << COM00 ) | ( 1 << COM01 ) 
+				| ( 1 << CS00 ) | ( 1 << CS01 ) | ( 1 << CS02 );		// FAST PWM mode 설정
+		OCR0 = 100;
+
+	#else                             
+		sbi( TIMSK, TOIE0 );     	// 타이머0 오버플로어 ON
+ 2f4:	87 b7       	in	r24, 0x37	; 55
+ 2f6:	81 60       	ori	r24, 0x01	; 1
+ 2f8:	87 bf       	out	0x37, r24	; 55
+		TCNT0 = 0;		// 타이머0 상수 
+ 2fa:	12 be       	out	0x32, r1	; 50
+		
+		TCCR0 = ( 0 << CS00 ) | ( 1 << CS01 ) | ( 1 << CS02 );				// prescaler 설정
+ 2fc:	86 e0       	ldi	r24, 0x06	; 6
+ 2fe:	83 bf       	out	0x33, r24	; 51
+//               			===== Timer Initialize =====
+//------------------------------------------------------------------------------
+void Init_Timer(void)         	// 타이머 초기화
+{
+		Init_Timer0();           	//타이머0 초기화
+}
+ 300:	08 95       	ret
+
+00000302 <Init_Timer0>:
+		TCCR0 = ( 1 << WGM01 ) | ( 1 << WGM00 )  | ( 0 << COM00 ) | ( 1 << COM01 ) 
+				| ( 1 << CS00 ) | ( 1 << CS01 ) | ( 1 << CS02 );		// FAST PWM mode 설정
+		OCR0 = 100;
+
+	#else                             
+		sbi( TIMSK, TOIE0 );     	// 타이머0 오버플로어 ON
+ 302:	87 b7       	in	r24, 0x37	; 55
+ 304:	81 60       	ori	r24, 0x01	; 1
+ 306:	87 bf       	out	0x37, r24	; 55
+		TCNT0 = 0;		// 타이머0 상수 
+ 308:	12 be       	out	0x32, r1	; 50
+		
+		TCCR0 = ( 0 << CS00 ) | ( 1 << CS01 ) | ( 1 << CS02 );				// prescaler 설정
+ 30a:	86 e0       	ldi	r24, 0x06	; 6
+ 30c:	83 bf       	out	0x33, r24	; 51
+		
+	#endif
+}
+ 30e:	08 95       	ret
+
+00000310 <Init_Uart>:
+//------------------------------------------------------------------------------
+//     				===== Uart_Init =====
+//             		: 희망하는 속도로 시리얼 통신을 초기화 한다.
+//------------------------------------------------------------------------------
+void Init_Uart(U08 Com, U32 Uart_Baud)
+{
+ 310:	1f 93       	push	r17
+ 312:	18 2f       	mov	r17, r24
+ 314:	9a 01       	movw	r18, r20
+ 316:	ab 01       	movw	r20, r22
+	U16 Temp_UBRR;
+
+	Temp_UBRR = AVR_CLK/(16L * Uart_Baud) - 1;   	// 통신 보레이트 계산식
+ 318:	84 e0       	ldi	r24, 0x04	; 4
+ 31a:	22 0f       	add	r18, r18
+ 31c:	33 1f       	adc	r19, r19
+ 31e:	44 1f       	adc	r20, r20
+ 320:	55 1f       	adc	r21, r21
+ 322:	8a 95       	dec	r24
+ 324:	d1 f7       	brne	.-12     	; 0x31a <Init_Uart+0xa>
+ 326:	60 e0       	ldi	r22, 0x00	; 0
+ 328:	74 e2       	ldi	r23, 0x24	; 36
+ 32a:	84 ef       	ldi	r24, 0xF4	; 244
+ 32c:	90 e0       	ldi	r25, 0x00	; 0
+ 32e:	0e 94 d1 01 	call	0x3a2	; 0x3a2 <__udivmodsi4>
+ 332:	21 50       	subi	r18, 0x01	; 1
+ 334:	30 40       	sbci	r19, 0x00	; 0
+													// U2X = 0 일때 (일반모드)
+	
+    //---------------------------- UART0 초기화 --------------------------------
+	if( Com == UART0 )                           	
+ 336:	11 23       	and	r17, r17
+ 338:	71 f4       	brne	.+28     	; 0x356 <Init_Uart+0x46>
+	{
+		UBRR0H = (Temp_UBRR >> 8);              // 통신속도 설정
+ 33a:	30 93 90 00 	sts	0x0090, r19
+		UBRR0L = (Temp_UBRR & 0x00FF);
+ 33e:	29 b9       	out	0x09, r18	; 9
+		
+		UCSR0A = (0<<RXC0)  | (1<<UDRE0);		// 수신,송신 상태비트 초기화
+ 340:	80 e2       	ldi	r24, 0x20	; 32
+ 342:	8b b9       	out	0x0b, r24	; 11
+        UCSR0B = (1<<RXEN0) | (1<<TXEN0);  		// 수신,송신 기능 활성화
+ 344:	88 e1       	ldi	r24, 0x18	; 24
+ 346:	8a b9       	out	0x0a, r24	; 10
+		UCSR0C = (3<<UCSZ00);				// START 1비트/DATA 8비트/STOP 1비트
+ 348:	86 e0       	ldi	r24, 0x06	; 6
+ 34a:	80 93 95 00 	sts	0x0095, r24
+		
+		cbi( DDRE, 0 );                         // RXD0 핀 입력으로 설정
+ 34e:	10 98       	cbi	0x02, 0	; 2
+		sbi( DDRE, 1 );                         // TXD0 핀 출력으로 설정
+ 350:	11 9a       	sbi	0x02, 1	; 2
+		
+		#ifdef UART0_RX_INT_ENABLE			// UART0_RX_INT_ENABLE 설정시만
+			UCSR0B |=  (1<<RXCIE0);	             	// 수신인터럽트0 활성화
+ 352:	57 9a       	sbi	0x0a, 7	; 10
+ 354:	11 c0       	rjmp	.+34     	; 0x378 <Init_Uart+0x68>
+		#endif
+	}
+	
+    //---------------------------- UART1 초기화 --------------------------------
+	if( Com == UART1)
+ 356:	11 30       	cpi	r17, 0x01	; 1
+ 358:	79 f4       	brne	.+30     	; 0x378 <Init_Uart+0x68>
+	{
+		UBRR1H = (Temp_UBRR >> 8);              // 통신속도 설정
+ 35a:	30 93 98 00 	sts	0x0098, r19
+		UBRR1L = (Temp_UBRR & 0x00FF);
+ 35e:	20 93 99 00 	sts	0x0099, r18
+
+		UCSR1A = (0<<RXC1)  | (1<<UDRE1); 	// 수신,송신 상태비트 초기화
+ 362:	80 e2       	ldi	r24, 0x20	; 32
+ 364:	80 93 9b 00 	sts	0x009B, r24
+		UCSR1B = (1<<RXEN1) | (1<<TXEN1);    	// 수신,송신 기능 활성화
+ 368:	88 e1       	ldi	r24, 0x18	; 24
+ 36a:	80 93 9a 00 	sts	0x009A, r24
+		UCSR1C = (3<<UCSZ10);                   // START 1비트/DATA 8비트/STOP 1비트
+ 36e:	86 e0       	ldi	r24, 0x06	; 6
+ 370:	80 93 9d 00 	sts	0x009D, r24
+		
+		cbi( DDRD, 2 );                         // RXD1 핀 입력으로 설정
+ 374:	8a 98       	cbi	0x11, 2	; 17
+		sbi( DDRD, 3 );                         // TXD1 핀 출력으로 설정
+ 376:	8b 9a       	sbi	0x11, 3	; 17
+		#ifdef UART1_RX_INT_ENABLE			// UART1_RX_INT_ENABLE 설정시만
+			UCSR1B |=  (1<<RXCIE1);              	// 수신인터럽트1 활성화
+		#endif
+	}
+
+}
+ 378:	1f 91       	pop	r17
+ 37a:	08 95       	ret
+
+0000037c <Uart_Putch>:
+//   				===== Uart_Putch =====
+//             		: 시리얼 포트로 1바이트 보낸다.
+//----------------------------------------------------------------------------
+void Uart_Putch(U08 Com, U08 PutData)
+{
+	switch(Com)
+ 37c:	88 23       	and	r24, r24
+ 37e:	19 f0       	breq	.+6      	; 0x386 <Uart_Putch+0xa>
+ 380:	81 30       	cpi	r24, 0x01	; 1
+ 382:	59 f4       	brne	.+22     	; 0x39a <Uart_Putch+0x1e>
+ 384:	04 c0       	rjmp	.+8      	; 0x38e <Uart_Putch+0x12>
+	{
+		case UART0:
+			while(!( UCSR0A & (1<<UDRE0)) );    // 송신가능시점까지 대기
+ 386:	5d 9b       	sbis	0x0b, 5	; 11
+ 388:	fe cf       	rjmp	.-4      	; 0x386 <Uart_Putch+0xa>
+			UDR0 = PutData;                     // 데이터를 전송한다
+ 38a:	6c b9       	out	0x0c, r22	; 12
+ 38c:	08 95       	ret
+			break;
+		
+		case UART1:
+			while(!( UCSR1A & (1<<UDRE1)) );    // 송신가능시점까지 대기
+ 38e:	80 91 9b 00 	lds	r24, 0x009B
+ 392:	85 ff       	sbrs	r24, 5
+ 394:	fc cf       	rjmp	.-8      	; 0x38e <Uart_Putch+0x12>
+			UDR1 = PutData;                     // 데이터를 전송한다
+ 396:	60 93 9c 00 	sts	0x009C, r22
+ 39a:	08 95       	ret
+
+0000039c <exit>:
+ 39c:	f8 94       	cli
+ 39e:	0c 94 f3 01 	jmp	0x3e6	; 0x3e6 <_exit>
+
+000003a2 <__udivmodsi4>:
+ 3a2:	a1 e2       	ldi	r26, 0x21	; 33
+ 3a4:	1a 2e       	mov	r1, r26
+ 3a6:	aa 1b       	sub	r26, r26
+ 3a8:	bb 1b       	sub	r27, r27
+ 3aa:	fd 01       	movw	r30, r26
+ 3ac:	0d c0       	rjmp	.+26     	; 0x3c8 <__udivmodsi4_ep>
+
+000003ae <__udivmodsi4_loop>:
+ 3ae:	aa 1f       	adc	r26, r26
+ 3b0:	bb 1f       	adc	r27, r27
+ 3b2:	ee 1f       	adc	r30, r30
+ 3b4:	ff 1f       	adc	r31, r31
+ 3b6:	a2 17       	cp	r26, r18
+ 3b8:	b3 07       	cpc	r27, r19
+ 3ba:	e4 07       	cpc	r30, r20
+ 3bc:	f5 07       	cpc	r31, r21
+ 3be:	20 f0       	brcs	.+8      	; 0x3c8 <__udivmodsi4_ep>
+ 3c0:	a2 1b       	sub	r26, r18
+ 3c2:	b3 0b       	sbc	r27, r19
+ 3c4:	e4 0b       	sbc	r30, r20
+ 3c6:	f5 0b       	sbc	r31, r21
+
+000003c8 <__udivmodsi4_ep>:
+ 3c8:	66 1f       	adc	r22, r22
+ 3ca:	77 1f       	adc	r23, r23
+ 3cc:	88 1f       	adc	r24, r24
+ 3ce:	99 1f       	adc	r25, r25
+ 3d0:	1a 94       	dec	r1
+ 3d2:	69 f7       	brne	.-38     	; 0x3ae <__udivmodsi4_loop>
+ 3d4:	60 95       	com	r22
+ 3d6:	70 95       	com	r23
+ 3d8:	80 95       	com	r24
+ 3da:	90 95       	com	r25
+ 3dc:	9b 01       	movw	r18, r22
+ 3de:	ac 01       	movw	r20, r24
+ 3e0:	bd 01       	movw	r22, r26
+ 3e2:	cf 01       	movw	r24, r30
+ 3e4:	08 95       	ret
+
+000003e6 <_exit>:
+ 3e6:	f8 94       	cli
+
+000003e8 <__stop_program>:
+ 3e8:	ff cf       	rjmp	.-2      	; 0x3e8 <__stop_program>

@@ -1,0 +1,144 @@
+
+interrupt.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000092  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .stab         000006cc  00000000  00000000  000000e8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  2 .stabstr      00000085  00000000  00000000  000007b4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_aranges 00000020  00000000  00000000  00000839  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 00000039  00000000  00000000  00000859  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000000ac  00000000  00000000  00000892  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000063  00000000  00000000  0000093e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000012d  00000000  00000000  000009a1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000040  00000000  00000000  00000ad0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000009b  00000000  00000000  00000b10  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_pubtypes 0000001e  00000000  00000000  00000bab  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	14 c0       	rjmp	.+40     	; 0x2a <__ctors_end>
+   2:	1c c0       	rjmp	.+56     	; 0x3c <__vector_1>
+   4:	29 c0       	rjmp	.+82     	; 0x58 <__vector_2>
+   6:	19 c0       	rjmp	.+50     	; 0x3a <__bad_interrupt>
+   8:	18 c0       	rjmp	.+48     	; 0x3a <__bad_interrupt>
+   a:	17 c0       	rjmp	.+46     	; 0x3a <__bad_interrupt>
+   c:	16 c0       	rjmp	.+44     	; 0x3a <__bad_interrupt>
+   e:	15 c0       	rjmp	.+42     	; 0x3a <__bad_interrupt>
+  10:	14 c0       	rjmp	.+40     	; 0x3a <__bad_interrupt>
+  12:	13 c0       	rjmp	.+38     	; 0x3a <__bad_interrupt>
+  14:	12 c0       	rjmp	.+36     	; 0x3a <__bad_interrupt>
+  16:	11 c0       	rjmp	.+34     	; 0x3a <__bad_interrupt>
+  18:	10 c0       	rjmp	.+32     	; 0x3a <__bad_interrupt>
+  1a:	0f c0       	rjmp	.+30     	; 0x3a <__bad_interrupt>
+  1c:	0e c0       	rjmp	.+28     	; 0x3a <__bad_interrupt>
+  1e:	0d c0       	rjmp	.+26     	; 0x3a <__bad_interrupt>
+  20:	0c c0       	rjmp	.+24     	; 0x3a <__bad_interrupt>
+  22:	0b c0       	rjmp	.+22     	; 0x3a <__bad_interrupt>
+  24:	0a c0       	rjmp	.+20     	; 0x3a <__bad_interrupt>
+  26:	09 c0       	rjmp	.+18     	; 0x3a <__bad_interrupt>
+  28:	08 c0       	rjmp	.+16     	; 0x3a <__bad_interrupt>
+
+0000002a <__ctors_end>:
+  2a:	11 24       	eor	r1, r1
+  2c:	1f be       	out	0x3f, r1	; 63
+  2e:	cf e5       	ldi	r28, 0x5F	; 95
+  30:	d2 e0       	ldi	r29, 0x02	; 2
+  32:	de bf       	out	0x3e, r29	; 62
+  34:	cd bf       	out	0x3d, r28	; 61
+  36:	1e d0       	rcall	.+60     	; 0x74 <main>
+  38:	2a c0       	rjmp	.+84     	; 0x8e <_exit>
+
+0000003a <__bad_interrupt>:
+  3a:	e2 cf       	rjmp	.-60     	; 0x0 <__vectors>
+
+0000003c <__vector_1>:
+#include <avr/interrupt.h>
+#include <util/delay.h>
+
+
+SIGNAL(INT0_vect)//INT0구문
+{
+  3c:	1f 92       	push	r1
+  3e:	0f 92       	push	r0
+  40:	0f b6       	in	r0, 0x3f	; 63
+  42:	0f 92       	push	r0
+  44:	11 24       	eor	r1, r1
+  46:	8f 93       	push	r24
+	PORTC = 0xf0;//LEDON
+  48:	80 ef       	ldi	r24, 0xF0	; 240
+  4a:	85 bb       	out	0x15, r24	; 21
+}
+  4c:	8f 91       	pop	r24
+  4e:	0f 90       	pop	r0
+  50:	0f be       	out	0x3f, r0	; 63
+  52:	0f 90       	pop	r0
+  54:	1f 90       	pop	r1
+  56:	18 95       	reti
+
+00000058 <__vector_2>:
+
+SIGNAL(INT1_vect)//INT1구문
+{
+  58:	1f 92       	push	r1
+  5a:	0f 92       	push	r0
+  5c:	0f b6       	in	r0, 0x3f	; 63
+  5e:	0f 92       	push	r0
+  60:	11 24       	eor	r1, r1
+  62:	8f 93       	push	r24
+	PORTC = 0x0f;//LEDON
+  64:	8f e0       	ldi	r24, 0x0F	; 15
+  66:	85 bb       	out	0x15, r24	; 21
+}
+  68:	8f 91       	pop	r24
+  6a:	0f 90       	pop	r0
+  6c:	0f be       	out	0x3f, r0	; 63
+  6e:	0f 90       	pop	r0
+  70:	1f 90       	pop	r1
+  72:	18 95       	reti
+
+00000074 <main>:
+
+int main(void)
+{
+	DDRC = 0xff;	//출력설정
+  74:	8f ef       	ldi	r24, 0xFF	; 255
+  76:	84 bb       	out	0x14, r24	; 20
+	PORTC = 0xff;	//평소에 꺼놓기
+  78:	85 bb       	out	0x15, r24	; 21
+	SREG |= 0x80;	//글로벌인터럽트 set
+  7a:	8f b7       	in	r24, 0x3f	; 63
+  7c:	80 68       	ori	r24, 0x80	; 128
+  7e:	8f bf       	out	0x3f, r24	; 63
+	GICR = 0xc0;	//인터럽트 set
+  80:	80 ec       	ldi	r24, 0xC0	; 192
+  82:	8b bf       	out	0x3b, r24	; 59
+	MCUCR |= 0x00; //(1<<ISC01)|(0<<ISC00)|(1<<ISC10)|(0<<ISC11);	//low 상태일때
+  84:	85 b7       	in	r24, 0x35	; 53
+  86:	85 bf       	out	0x35, r24	; 53
+
+
+	while(1)
+	{
+	PORTC = 0xff;	//평소에는 꺼놓는다.
+  88:	8f ef       	ldi	r24, 0xFF	; 255
+  8a:	85 bb       	out	0x15, r24	; 21
+  8c:	fe cf       	rjmp	.-4      	; 0x8a <main+0x16>
+
+0000008e <_exit>:
+  8e:	f8 94       	cli
+
+00000090 <__stop_program>:
+  90:	ff cf       	rjmp	.-2      	; 0x90 <__stop_program>

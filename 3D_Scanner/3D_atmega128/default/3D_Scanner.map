@@ -1,0 +1,556 @@
+Archive member included because of file (symbol)
+
+c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodqi4.o)
+                              main.o (__udivmodqi4)
+c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodhi4.o)
+                              main.o (__udivmodhi4)
+c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodsi4.o)
+                              uart.o (__udivmodsi4)
+c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_exit.o)
+                              c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o (exit)
+c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_copy_data.o)
+                              main.o (__do_copy_data)
+c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_clear_bss.o)
+                              main.o (__do_clear_bss)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800100         0x0000ff00         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+LOAD main.o
+LOAD adc.o
+LOAD timer.o
+LOAD uart.o
+LOAD motor_step.o
+LOAD ext_interrupt.o
+LOAD c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a
+LOAD c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51\libc.a
+LOAD c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x15d4
+ *(.vectors)
+ .vectors       0x00000000       0x8c c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+                0x00000000                __vector_default
+                0x00000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x0000008c                . = ALIGN (0x2)
+                0x0000008c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000008c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000008c                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000008c                __ctors_start = .
+ *(.ctors)
+                0x0000008c                __ctors_end = .
+                0x0000008c                __dtors_start = .
+ *(.dtors)
+                0x0000008c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000008c        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+                0x0000008c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000008c        0xc c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000098       0x1a c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_copy_data.o)
+                0x00000098                __do_copy_data
+ .init4         0x000000b2       0x10 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_clear_bss.o)
+                0x000000b2                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000c2        0x8 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+ *(.init9)
+ *(.text)
+ .text          0x000000ca        0x4 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+                0x000000ca                __vector_22
+                0x000000ca                __vector_28
+                0x000000ca                __vector_32
+                0x000000ca                __vector_34
+                0x000000ca                __vector_24
+                0x000000ca                __vector_12
+                0x000000ca                __bad_interrupt
+                0x000000ca                __vector_31
+                0x000000ca                __vector_23
+                0x000000ca                __vector_25
+                0x000000ca                __vector_11
+                0x000000ca                __vector_13
+                0x000000ca                __vector_17
+                0x000000ca                __vector_19
+                0x000000ca                __vector_27
+                0x000000ca                __vector_33
+                0x000000ca                __vector_9
+                0x000000ca                __vector_21
+                0x000000ca                __vector_15
+                0x000000ca                __vector_29
+                0x000000ca                __vector_26
+                0x000000ca                __vector_14
+                0x000000ca                __vector_10
+                0x000000ca                __vector_20
+ .text          0x000000ce      0xa66 main.o
+                0x000000ce                __vector_18
+                0x000000fa                __vector_30
+                0x000001a8                __vector_16
+                0x000001f2                Compare_Dis
+                0x00000214                Data_to_PC
+                0x00000234                Filter
+                0x000002ba                lcd_iw
+                0x000002ea                lcd_dw
+                0x00000316                init_lcd
+                0x00000340                Main_Init
+                0x00000386                lcd_str
+                0x000003c0                main
+ .text          0x00000b34       0xdc adc.o
+                0x00000b34                Read_ADC
+                0x00000b4a                Read_ADC_NOSTOP
+                0x00000b5e                ADC_Average
+                0x00000bfc                Init_ADC
+ .text          0x00000c10       0x4a timer.o
+                0x00000c10                Init_Timer0
+                0x00000c20                Init_Timer
+                0x00000c26                Init_Timer1
+                0x00000c36                Init_Timer2
+                0x00000c42                Init_Timer3
+ .text          0x00000c5a      0x4a8 uart.o
+                0x00000c5a                Init_Uart
+                0x00000cd0                Uart_Getch
+                0x00000cf4                Uart_Putch
+                0x00000d14                Uart_Print
+                0x00000d60                Uart_U08Bit_PutNum
+                0x00000dbe                Uart_U08Bit_PutNum_Substance
+                0x00000e22                Uart_U10Bit_PutNum
+                0x00000e98                Uart_U10Bit_PutNum3
+                0x00000efa                Uart_U16Bit_PutNum
+                0x00000f00                Uart_U16Bit_PutNum_Substance
+                0x00000ff2                Uart_ByteToHexPutch
+                0x0000106a                Uart_WordToHexPutch
+ .text          0x00001102      0x216 motor_step.o
+                0x00001102                Motor_Init
+                0x00001110                X_StepMotor_Move_1step
+                0x00001126                Y_StepMotor_Move_1step
+                0x0000113c                X_Move_Startpoint
+                0x000011d4                Y_Move_Startpoint
+                0x000011fc                X_Move_deg
+                0x00001266                Y_Move_Simple
+                0x000012b6                Lets_Do_FirstStep
+ .text          0x00001318      0x234 ext_interrupt.o
+                0x00001318                Init_Ext_Interrupt
+                0x00001420                __vector_1
+                0x0000144a                __vector_2
+                0x00001474                __vector_3
+                0x00001498                __vector_4
+                0x000014bc                __vector_5
+                0x000014e0                __vector_6
+                0x00001504                __vector_7
+                0x00001528                __vector_8
+ .text          0x0000154c        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodqi4.o)
+ .text          0x0000154c        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodhi4.o)
+ .text          0x0000154c        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodsi4.o)
+ .text          0x0000154c        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_exit.o)
+ .text          0x0000154c        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_copy_data.o)
+ .text          0x0000154c        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_clear_bss.o)
+                0x0000154c                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x0000154c       0x18 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodqi4.o)
+                0x0000154c                __udivmodqi4
+ .text.libgcc   0x00001564       0x28 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodhi4.o)
+                0x00001564                __udivmodhi4
+ .text.libgcc   0x0000158c       0x44 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodsi4.o)
+                0x0000158c                __udivmodsi4
+ .text.libgcc   0x000015d0        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_exit.o)
+ .text.libgcc   0x000015d0        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000015d0        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_clear_bss.o)
+                0x000015d0                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000015d0        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_exit.o)
+                0x000015d0                _exit
+                0x000015d0                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000015d0        0x4 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_exit.o)
+ *(.fini0)
+                0x000015d4                _etext = .
+
+.data           0x00800100       0xc8 load address 0x000015d4
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+ .data          0x00800100       0xa7 main.o
+                0x00800100                SIG_To2
+                0x00800112                str1
+                0x00800121                str2
+                0x00800131                str3
+                0x00800144                str4
+                0x00800158                str5
+                0x00800167                str6
+                0x00800175                str8
+                0x00800183                str9
+                0x00800195                str10
+                0x008001a5                str11
+ .data          0x008001a7        0x0 adc.o
+ .data          0x008001a7        0x0 timer.o
+ .data          0x008001a7       0x20 uart.o
+ .data          0x008001c7        0x0 motor_step.o
+ .data          0x008001c7        0x0 ext_interrupt.o
+ .data          0x008001c7        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodqi4.o)
+ .data          0x008001c7        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodhi4.o)
+ .data          0x008001c7        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodsi4.o)
+ .data          0x008001c7        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_exit.o)
+ .data          0x008001c7        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_copy_data.o)
+ .data          0x008001c7        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x008001c8                . = ALIGN (0x2)
+ *fill*         0x008001c7        0x1 00
+                0x008001c8                _edata = .
+                0x008001c8                PROVIDE (__data_end, .)
+
+.bss            0x008001c8      0x37a
+                0x008001c8                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x008001c8        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+ .bss           0x008001c8      0x37a main.o
+                0x008001c8                BREAK_NUM0
+                0x008001c9                BREAK_NUM1
+                0x008001ca                Instruction
+                0x008001cf                Instruction2
+                0x008001d0                SENSING_CW
+                0x00800374                Filtering
+                0x00800504                WRONG_SIG
+                0x00800505                Dis
+                0x00800507                Fisrtpoint_Flag
+                0x00800508                op_cnt
+                0x0080050a                result_op_cnt
+                0x0080050b                Height
+                0x0080050d                Percent
+                0x0080051c                Percent10
+                0x0080052b                Percent1
+                0x0080053a                arr
+ .bss           0x00800542        0x0 adc.o
+ .bss           0x00800542        0x0 timer.o
+ .bss           0x00800542        0x0 uart.o
+ .bss           0x00800542        0x0 motor_step.o
+ .bss           0x00800542        0x0 ext_interrupt.o
+ .bss           0x00800542        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodqi4.o)
+ .bss           0x00800542        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800542        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800542        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_exit.o)
+ .bss           0x00800542        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_copy_data.o)
+ .bss           0x00800542        0x0 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/avr51\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+                0x00800542                PROVIDE (__bss_end, .)
+                0x000015d4                __data_load_start = LOADADDR (.data)
+                0x0000169c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800542        0x0
+                0x00800542                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800542                PROVIDE (__noinit_end, .)
+                0x00800542                _end = .
+                0x00800542                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000      0x6cc
+ *(.stab)
+ .stab          0x00000000      0x6cc c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+
+.stabstr        0x00000000       0x85
+ *(.stabstr)
+ .stabstr       0x00000000       0x85 c:/program files (x86)/atmel/avr tools/avr toolchain/bin/../lib/gcc/avr/4.5.1/../../../../avr/lib/avr51/crtm128.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xc0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x20 adc.o
+ .debug_aranges
+                0x00000040       0x20 timer.o
+ .debug_aranges
+                0x00000060       0x20 uart.o
+ .debug_aranges
+                0x00000080       0x20 motor_step.o
+ .debug_aranges
+                0x000000a0       0x20 ext_interrupt.o
+
+.debug_pubnames
+                0x00000000      0x51f
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x1f7 main.o
+ .debug_pubnames
+                0x000001f7       0x50 adc.o
+ .debug_pubnames
+                0x00000247       0x61 timer.o
+ .debug_pubnames
+                0x000002a8      0x11c uart.o
+ .debug_pubnames
+                0x000003c4       0xba motor_step.o
+ .debug_pubnames
+                0x0000047e       0xa1 ext_interrupt.o
+
+.debug_info     0x00000000     0x1f7d
+ *(.debug_info)
+ .debug_info    0x00000000     0x10ca main.o
+ .debug_info    0x000010ca      0x18a adc.o
+ .debug_info    0x00001254       0xdd timer.o
+ .debug_info    0x00001331      0x445 uart.o
+ .debug_info    0x00001776      0x68e motor_step.o
+ .debug_info    0x00001e04      0x179 ext_interrupt.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x786
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x2a7 main.o
+ .debug_abbrev  0x000002a7       0xd9 adc.o
+ .debug_abbrev  0x00000380       0x4c timer.o
+ .debug_abbrev  0x000003cc      0x15c uart.o
+ .debug_abbrev  0x00000528      0x1ce motor_step.o
+ .debug_abbrev  0x000006f6       0x90 ext_interrupt.o
+
+.debug_line     0x00000000     0x1b18
+ *(.debug_line)
+ .debug_line    0x00000000      0xafa main.o
+ .debug_line    0x00000afa      0x1ef adc.o
+ .debug_line    0x00000ce9      0x17f timer.o
+ .debug_line    0x00000e68      0x4d8 uart.o
+ .debug_line    0x00001340      0x487 motor_step.o
+ .debug_line    0x000017c7      0x351 ext_interrupt.o
+
+.debug_frame    0x00000000      0x380
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xd0 main.o
+ .debug_frame   0x000000d0       0x50 adc.o
+ .debug_frame   0x00000120       0x60 timer.o
+ .debug_frame   0x00000180       0xd0 uart.o
+ .debug_frame   0x00000250       0x90 motor_step.o
+ .debug_frame   0x000002e0       0xa0 ext_interrupt.o
+
+.debug_str      0x00000000      0x5d3
+ *(.debug_str)
+ .debug_str     0x00000000      0x2e1 main.o
+                                0x31c (size before relaxing)
+ .debug_str     0x000002e1       0x62 adc.o
+                                0x12d (size before relaxing)
+ .debug_str     0x00000343       0x4d timer.o
+                                0x118 (size before relaxing)
+ .debug_str     0x00000390      0x186 uart.o
+                                0x24d (size before relaxing)
+ .debug_str     0x00000516       0x38 motor_step.o
+                                0x21f (size before relaxing)
+ .debug_str     0x0000054e       0x85 ext_interrupt.o
+                                0x15d (size before relaxing)
+
+.debug_loc      0x00000000     0x125c
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x95c main.o
+ .debug_loc     0x0000095c      0x119 adc.o
+ .debug_loc     0x00000a75      0x3ed uart.o
+ .debug_loc     0x00000e62      0x39a motor_step.o
+ .debug_loc     0x000011fc       0x60 ext_interrupt.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(3D_Scanner.elf elf32-avr)
+LOAD linker stubs
+
+.debug_pubtypes
+                0x00000000      0x162
+ .debug_pubtypes
+                0x00000000       0x58 main.o
+ .debug_pubtypes
+                0x00000058       0x3b adc.o
+ .debug_pubtypes
+                0x00000093       0x2b timer.o
+ .debug_pubtypes
+                0x000000be       0x36 uart.o
+ .debug_pubtypes
+                0x000000f4       0x48 motor_step.o
+ .debug_pubtypes
+                0x0000013c       0x26 ext_interrupt.o
+
+.debug_ranges   0x00000000      0x160
+ .debug_ranges  0x00000000      0x100 main.o
+ .debug_ranges  0x00000100       0x60 motor_step.o

@@ -1,0 +1,302 @@
+
+adc_test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001c6  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .stab         000006cc  00000000  00000000  0000021c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  2 .stabstr      00000085  00000000  00000000  000008e8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_aranges 00000020  00000000  00000000  0000096d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 0000005c  00000000  00000000  0000098d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000001f3  00000000  00000000  000009e9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000165  00000000  00000000  00000bdc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000283  00000000  00000000  00000d41  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000060  00000000  00000000  00000fc4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000012c  00000000  00000000  00001024  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000005e  00000000  00000000  00001150  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_pubtypes 00000038  00000000  00000000  000011ae  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+   8:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+   c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  10:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  14:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  18:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  1c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  20:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  24:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  28:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  2c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  30:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  34:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  38:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  3c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  40:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  44:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  48:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  4c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  50:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  54:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  58:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  5c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  60:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  64:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  68:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  6c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  70:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  74:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  78:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  7c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  80:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  84:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  88:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	0e 94 bc 00 	call	0x178	; 0x178 <main>
+  9c:	0c 94 e1 00 	jmp	0x1c2	; 0x1c2 <_exit>
+
+000000a0 <__bad_interrupt>:
+  a0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a4 <Main_Init>:
+
+void Main_Init(void)                        //전체 세팅 
+{
+//////////////////////////////////////////////UART 세팅
+
+	cbi(SREG,7);           					//모든 인터럽트 비활성화
+  a4:	8f b7       	in	r24, 0x3f	; 63
+  a6:	8f 77       	andi	r24, 0x7F	; 127
+  a8:	8f bf       	out	0x3f, r24	; 63
+	UBRR0H = 0; UBRR0L = 16;				//57600bps(16MHz)
+  aa:	10 92 90 00 	sts	0x0090, r1
+  ae:	80 e1       	ldi	r24, 0x10	; 16
+  b0:	89 b9       	out	0x09, r24	; 9
+	UCSR0A = (0<<RXC0)|(1<<UDRE0);			//수신,송신 상태비트 초기
+  b2:	80 e2       	ldi	r24, 0x20	; 32
+  b4:	8b b9       	out	0x0b, r24	; 11
+	UCSR0B = (1<<RXEN0)|(1<<TXEN0);			//수신,송신 기능 활성화
+  b6:	88 e1       	ldi	r24, 0x18	; 24
+  b8:	8a b9       	out	0x0a, r24	; 10
+	UCSR0C = (3<<UCSZ00);					//START  1비트 DATA8비트
+  ba:	86 e0       	ldi	r24, 0x06	; 6
+  bc:	80 93 95 00 	sts	0x0095, r24
+	cbi(DDRE,0);							//RXD1핀 입력으로 설정
+  c0:	10 98       	cbi	0x02, 0	; 2
+	sbi(DDRE,1);							//TXD1핀 출력으로 설정
+  c2:	11 9a       	sbi	0x02, 1	; 2
+
+
+
+//////////////////////////////////////////////ADC 세팅
+
+	ADMUX = 0x00;							//ADC 초기화
+  c4:	17 b8       	out	0x07, r1	; 7
+	ADCSRA = 0x87;							//ADC Enable, 분주비=128
+  c6:	87 e8       	ldi	r24, 0x87	; 135
+  c8:	86 b9       	out	0x06, r24	; 6
+	cbi(DDRF,0);							//ADC0 핀 입력으로 설정
+  ca:	e1 e6       	ldi	r30, 0x61	; 97
+  cc:	f0 e0       	ldi	r31, 0x00	; 0
+  ce:	80 81       	ld	r24, Z
+  d0:	8e 7f       	andi	r24, 0xFE	; 254
+  d2:	80 83       	st	Z, r24
+	sbi(SREG,7);							//모든 인터럽트 활성화
+  d4:	8f b7       	in	r24, 0x3f	; 63
+  d6:	80 68       	ori	r24, 0x80	; 128
+  d8:	8f bf       	out	0x3f, r24	; 63
+}
+  da:	08 95       	ret
+
+000000dc <Uart_Putch>:
+
+
+
+void Uart_Putch(unsigned char PutData)      //시리얼로부터 1바이트값을 보내는 함수
+{
+	while(!( UCSR0A & (1<<UDRE0)));         //데이터가 빌때까지 기다렷다가 데이터가차면 아웃
+  dc:	5d 9b       	sbis	0x0b, 5	; 11
+  de:	fe cf       	rjmp	.-4      	; 0xdc <Uart_Putch>
+	UDR0 = PutData;							//데이터를 전송한다.
+  e0:	8c b9       	out	0x0c, r24	; 12
+}										
+  e2:	08 95       	ret
+
+000000e4 <Uart_U16Bit_PutNum>:
+
+
+
+void Uart_U16Bit_PutNum(unsigned int NumData)      //각 자리수를 10진수로 변형해서 출력
+{
+  e4:	ef 92       	push	r14
+  e6:	ff 92       	push	r15
+  e8:	0f 93       	push	r16
+  ea:	1f 93       	push	r17
+  ec:	cf 93       	push	r28
+  ee:	df 93       	push	r29
+  f0:	ec 01       	movw	r28, r24
+	unsigned int TempData;
+	TempData = (NumData/10000);            // 10000 자리출력
+  f2:	60 e1       	ldi	r22, 0x10	; 16
+  f4:	77 e2       	ldi	r23, 0x27	; 39
+  f6:	0e 94 cd 00 	call	0x19a	; 0x19a <__udivmodhi4>
+  fa:	7c 01       	movw	r14, r24
+	Uart_Putch( TempData+48 );
+  fc:	86 2f       	mov	r24, r22
+  fe:	80 5d       	subi	r24, 0xD0	; 208
+ 100:	0e 94 6e 00 	call	0xdc	; 0xdc <Uart_Putch>
+	TempData = ( NumData%10000)/1000;      // 1000  자리출력
+ 104:	08 ee       	ldi	r16, 0xE8	; 232
+ 106:	13 e0       	ldi	r17, 0x03	; 3
+ 108:	c7 01       	movw	r24, r14
+ 10a:	b8 01       	movw	r22, r16
+ 10c:	0e 94 cd 00 	call	0x19a	; 0x19a <__udivmodhi4>
+	Uart_Putch( TempData+48 );
+ 110:	86 2f       	mov	r24, r22
+ 112:	80 5d       	subi	r24, 0xD0	; 208
+ 114:	0e 94 6e 00 	call	0xdc	; 0xdc <Uart_Putch>
+	TempData = ( NumData%1000)/100;		   // 100   자리출력
+ 118:	ce 01       	movw	r24, r28
+ 11a:	b8 01       	movw	r22, r16
+ 11c:	0e 94 cd 00 	call	0x19a	; 0x19a <__udivmodhi4>
+ 120:	04 e6       	ldi	r16, 0x64	; 100
+ 122:	10 e0       	ldi	r17, 0x00	; 0
+ 124:	b8 01       	movw	r22, r16
+ 126:	0e 94 cd 00 	call	0x19a	; 0x19a <__udivmodhi4>
+	Uart_Putch( TempData+48 );
+ 12a:	86 2f       	mov	r24, r22
+ 12c:	80 5d       	subi	r24, 0xD0	; 208
+ 12e:	0e 94 6e 00 	call	0xdc	; 0xdc <Uart_Putch>
+	TempData = ( NumData%100)/10;		   // 10    자리출력
+ 132:	ce 01       	movw	r24, r28
+ 134:	b8 01       	movw	r22, r16
+ 136:	0e 94 cd 00 	call	0x19a	; 0x19a <__udivmodhi4>
+ 13a:	0a e0       	ldi	r16, 0x0A	; 10
+ 13c:	10 e0       	ldi	r17, 0x00	; 0
+ 13e:	b8 01       	movw	r22, r16
+ 140:	0e 94 cd 00 	call	0x19a	; 0x19a <__udivmodhi4>
+	Uart_Putch( TempData+48 );
+ 144:	86 2f       	mov	r24, r22
+ 146:	80 5d       	subi	r24, 0xD0	; 208
+ 148:	0e 94 6e 00 	call	0xdc	; 0xdc <Uart_Putch>
+	TempData = ( NumData%10);			   // 1     자리출력
+ 14c:	ce 01       	movw	r24, r28
+ 14e:	b8 01       	movw	r22, r16
+ 150:	0e 94 cd 00 	call	0x19a	; 0x19a <__udivmodhi4>
+	Uart_Putch( TempData+48 );
+ 154:	80 5d       	subi	r24, 0xD0	; 208
+ 156:	0e 94 6e 00 	call	0xdc	; 0xdc <Uart_Putch>
+}
+ 15a:	df 91       	pop	r29
+ 15c:	cf 91       	pop	r28
+ 15e:	1f 91       	pop	r17
+ 160:	0f 91       	pop	r16
+ 162:	ff 90       	pop	r15
+ 164:	ef 90       	pop	r14
+ 166:	08 95       	ret
+
+00000168 <Read_ADC>:
+
+
+
+unsigned int Read_ADC(unsigned char ADC_Input)		
+{
+	ADMUX = ADC_Input;					//사용자 설정 (ADC값 입력)
+ 168:	87 b9       	out	0x07, r24	; 7
+	ADCSRA |= 0x40;						//ADC START Conversion
+ 16a:	36 9a       	sbi	0x06, 6	; 6
+	while( ( ADCSRA & 0x10) == 0) ;     //ADC interrupt flag check
+ 16c:	34 9b       	sbis	0x06, 4	; 6
+ 16e:	fe cf       	rjmp	.-4      	; 0x16c <Read_ADC+0x4>
+	return ADC;							//ADC값 반환
+ 170:	24 b1       	in	r18, 0x04	; 4
+ 172:	35 b1       	in	r19, 0x05	; 5
+}
+ 174:	c9 01       	movw	r24, r18
+ 176:	08 95       	ret
+
+00000178 <main>:
+
+
+
+void main(void)
+{
+	Main_Init();
+ 178:	0e 94 52 00 	call	0xa4	; 0xa4 <Main_Init>
+
+	while(1)
+	{
+		Uart_U16Bit_PutNum(Read_ADC(0b01000000));  //센서로 부터 받은 데이터를 컴퓨터로 송신
+ 17c:	80 e4       	ldi	r24, 0x40	; 64
+ 17e:	0e 94 b4 00 	call	0x168	; 0x168 <Read_ADC>
+ 182:	0e 94 72 00 	call	0xe4	; 0xe4 <Uart_U16Bit_PutNum>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 186:	8f ef       	ldi	r24, 0xFF	; 255
+ 188:	93 ed       	ldi	r25, 0xD3	; 211
+ 18a:	a0 e3       	ldi	r26, 0x30	; 48
+ 18c:	81 50       	subi	r24, 0x01	; 1
+ 18e:	90 40       	sbci	r25, 0x00	; 0
+ 190:	a0 40       	sbci	r26, 0x00	; 0
+ 192:	e1 f7       	brne	.-8      	; 0x18c <main+0x14>
+ 194:	00 c0       	rjmp	.+0      	; 0x196 <main+0x1e>
+ 196:	00 00       	nop
+ 198:	f1 cf       	rjmp	.-30     	; 0x17c <main+0x4>
+
+0000019a <__udivmodhi4>:
+ 19a:	aa 1b       	sub	r26, r26
+ 19c:	bb 1b       	sub	r27, r27
+ 19e:	51 e1       	ldi	r21, 0x11	; 17
+ 1a0:	07 c0       	rjmp	.+14     	; 0x1b0 <__udivmodhi4_ep>
+
+000001a2 <__udivmodhi4_loop>:
+ 1a2:	aa 1f       	adc	r26, r26
+ 1a4:	bb 1f       	adc	r27, r27
+ 1a6:	a6 17       	cp	r26, r22
+ 1a8:	b7 07       	cpc	r27, r23
+ 1aa:	10 f0       	brcs	.+4      	; 0x1b0 <__udivmodhi4_ep>
+ 1ac:	a6 1b       	sub	r26, r22
+ 1ae:	b7 0b       	sbc	r27, r23
+
+000001b0 <__udivmodhi4_ep>:
+ 1b0:	88 1f       	adc	r24, r24
+ 1b2:	99 1f       	adc	r25, r25
+ 1b4:	5a 95       	dec	r21
+ 1b6:	a9 f7       	brne	.-22     	; 0x1a2 <__udivmodhi4_loop>
+ 1b8:	80 95       	com	r24
+ 1ba:	90 95       	com	r25
+ 1bc:	bc 01       	movw	r22, r24
+ 1be:	cd 01       	movw	r24, r26
+ 1c0:	08 95       	ret
+
+000001c2 <_exit>:
+ 1c2:	f8 94       	cli
+
+000001c4 <__stop_program>:
+ 1c4:	ff cf       	rjmp	.-2      	; 0x1c4 <__stop_program>

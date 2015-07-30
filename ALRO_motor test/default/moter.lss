@@ -1,0 +1,448 @@
+
+moter.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800100  00000290  00000304  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000290  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .stab         000006cc  00000000  00000000  00000308  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  000009d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000020  00000000  00000000  00000a59  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_pubnames 00000051  00000000  00000000  00000a79  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000002e7  00000000  00000000  00000aca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000016b  00000000  00000000  00000db1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000391  00000000  00000000  00000f1c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000050  00000000  00000000  000012b0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000010a  00000000  00000000  00001300  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000199  00000000  00000000  0000140a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_pubtypes 00000038  00000000  00000000  000015a3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   8:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  10:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  14:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  24:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  34:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  38:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  3c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  40:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  44:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  48:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  4c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  50:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  54:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  58:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  5c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  60:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  68:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  6c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  70:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  74:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  78:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  7c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  80:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  84:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  88:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e0 e9       	ldi	r30, 0x90	; 144
+  a0:	f2 e0       	ldi	r31, 0x02	; 2
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a2 30       	cpi	r26, 0x02	; 2
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	0e 94 b4 00 	call	0x168	; 0x168 <main>
+  b6:	0c 94 46 01 	jmp	0x28c	; 0x28c <_exit>
+
+000000ba <__bad_interrupt>:
+  ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000be <main_init>:
+	return 0;
+}
+
+void main_init(void)
+{
+	cbi(SREG,7);				//모든 인터럽트 비활성화
+  be:	8f b7       	in	r24, 0x3f	; 63
+  c0:	8f 77       	andi	r24, 0x7F	; 127
+  c2:	8f bf       	out	0x3f, r24	; 63
+	UBRR1H = 0; UBRR1L = 16;   //57600bps(16MHZ)
+  c4:	10 92 98 00 	sts	0x0098, r1
+  c8:	80 e1       	ldi	r24, 0x10	; 16
+  ca:	80 93 99 00 	sts	0x0099, r24
+	UCSR1A = (0<<RXC1) | (1<<UDRE1);
+  ce:	20 e2       	ldi	r18, 0x20	; 32
+  d0:	20 93 9b 00 	sts	0x009B, r18
+	UCSR1B = (1<<RXEN1) | (1<<TXEN1);
+  d4:	98 e1       	ldi	r25, 0x18	; 24
+  d6:	90 93 9a 00 	sts	0x009A, r25
+	UCSR1C = (3<<UCSZ10);
+  da:	86 e0       	ldi	r24, 0x06	; 6
+  dc:	80 93 9d 00 	sts	0x009D, r24
+	
+	//bluetooth 이용 활성화
+	UBRR0H = 0; UBRR0L = 103;   //9600bps(16MHZ)
+  e0:	10 92 90 00 	sts	0x0090, r1
+  e4:	37 e6       	ldi	r19, 0x67	; 103
+  e6:	39 b9       	out	0x09, r19	; 9
+	UCSR0A = (0<<RXC0) | (1<<UDRE0);
+  e8:	2b b9       	out	0x0b, r18	; 11
+	UCSR0B = (1<<RXEN0) | (1<<TXEN0);
+  ea:	9a b9       	out	0x0a, r25	; 10
+	UCSR0C = (3<<UCSZ00);
+  ec:	80 93 95 00 	sts	0x0095, r24
+	
+	cbi(DDRE,0); 
+  f0:	10 98       	cbi	0x02, 0	; 2
+	sbi(DDRE,1);
+  f2:	11 9a       	sbi	0x02, 1	; 2
+	sbi(SREG,7);
+  f4:	8f b7       	in	r24, 0x3f	; 63
+  f6:	80 68       	ori	r24, 0x80	; 128
+  f8:	8f bf       	out	0x3f, r24	; 63
+
+
+	cbi(DDRD,2);  
+  fa:	8a 98       	cbi	0x11, 2	; 17
+	sbi(DDRD,3);
+  fc:	8b 9a       	sbi	0x11, 3	; 17
+	
+ 	DDRB=0xff;
+  fe:	8f ef       	ldi	r24, 0xFF	; 255
+ 100:	87 bb       	out	0x17, r24	; 23
+	PORTB=(1<<PORTB5)|(1<<PORTB6);// Enable dc motor
+ 102:	80 e6       	ldi	r24, 0x60	; 96
+ 104:	88 bb       	out	0x18, r24	; 24
+	
+	TCCR1A = 0x0A;  // OC1C포트에 모드설정   
+ 106:	8a e0       	ldi	r24, 0x0A	; 10
+ 108:	8f bd       	out	0x2f, r24	; 47
+	TCCR1B = 0x1C;  // mode14(fast pwm),분주비256 = 16us  
+ 10a:	8c e1       	ldi	r24, 0x1C	; 28
+ 10c:	8e bd       	out	0x2e, r24	; 46
+	ICR1 = 1249;    //ICR1값(OVERFLOW값) 16us*1250 = 20ms servo모터 주기설정 
+ 10e:	81 ee       	ldi	r24, 0xE1	; 225
+ 110:	94 e0       	ldi	r25, 0x04	; 4
+ 112:	97 bd       	out	0x27, r25	; 39
+ 114:	86 bd       	out	0x26, r24	; 38
+	OCR1C = 70;    // 비율 70:1250
+ 116:	86 e4       	ldi	r24, 0x46	; 70
+ 118:	90 e0       	ldi	r25, 0x00	; 0
+ 11a:	90 93 79 00 	sts	0x0079, r25
+ 11e:	80 93 78 00 	sts	0x0078, r24
+}
+ 122:	08 95       	ret
+
+00000124 <Uart_Putch>:
+
+void Uart_Putch(unsigned char Com, unsigned char PutData)
+{
+	switch(Com)
+ 124:	88 23       	and	r24, r24
+ 126:	19 f0       	breq	.+6      	; 0x12e <Uart_Putch+0xa>
+ 128:	81 30       	cpi	r24, 0x01	; 1
+ 12a:	59 f4       	brne	.+22     	; 0x142 <Uart_Putch+0x1e>
+ 12c:	04 c0       	rjmp	.+8      	; 0x136 <Uart_Putch+0x12>
+	{
+		case 0:
+			while(!( UCSR0A & (1<<UDRE0)) );    // 송신가능시점까지 대기
+ 12e:	5d 9b       	sbis	0x0b, 5	; 11
+ 130:	fe cf       	rjmp	.-4      	; 0x12e <Uart_Putch+0xa>
+			UDR0 = PutData;                     // 데이터를 전송한다
+ 132:	6c b9       	out	0x0c, r22	; 12
+			break;
+ 134:	08 95       	ret
+		
+		case 1:
+			while(!( UCSR1A & (1<<UDRE1)) );    // 송신가능시점까지 대기
+ 136:	80 91 9b 00 	lds	r24, 0x009B
+ 13a:	85 ff       	sbrs	r24, 5
+ 13c:	fc cf       	rjmp	.-8      	; 0x136 <Uart_Putch+0x12>
+			UDR1 = PutData;                     // 데이터를 전송한다
+ 13e:	60 93 9c 00 	sts	0x009C, r22
+ 142:	08 95       	ret
+
+00000144 <Uart_Getch>:
+	}
+}
+
+unsigned char Uart_Getch(unsigned char Com)
+{
+	switch( Com )
+ 144:	88 23       	and	r24, r24
+ 146:	19 f0       	breq	.+6      	; 0x14e <Uart_Getch+0xa>
+ 148:	81 30       	cpi	r24, 0x01	; 1
+ 14a:	61 f4       	brne	.+24     	; 0x164 <Uart_Getch+0x20>
+ 14c:	04 c0       	rjmp	.+8      	; 0x156 <Uart_Getch+0x12>
+	{
+		case 0:
+			while(!( UCSR0A & (1<<RXC0)) );    // 수신완료까지 대기
+ 14e:	5f 9b       	sbis	0x0b, 7	; 11
+ 150:	fe cf       	rjmp	.-4      	; 0x14e <Uart_Getch+0xa>
+			return UDR0;                       // 수신데이터 
+ 152:	8c b1       	in	r24, 0x0c	; 12
+ 154:	08 95       	ret
+		
+		case 1:
+			while(!( UCSR1A & (1<<RXC1)) );    // 수신완료까지 대기
+ 156:	80 91 9b 00 	lds	r24, 0x009B
+ 15a:	87 ff       	sbrs	r24, 7
+ 15c:	fc cf       	rjmp	.-8      	; 0x156 <Uart_Getch+0x12>
+			return UDR1;                       // 순신데이터 반환
+ 15e:	80 91 9c 00 	lds	r24, 0x009C
+ 162:	08 95       	ret
+		
+        default:
+			return 0;
+ 164:	80 e0       	ldi	r24, 0x00	; 0
+	}
+}
+ 166:	08 95       	ret
+
+00000168 <main>:
+
+int count=32;
+
+
+int main(void)
+{
+ 168:	cf 92       	push	r12
+ 16a:	df 92       	push	r13
+ 16c:	ef 92       	push	r14
+ 16e:	ff 92       	push	r15
+ 170:	0f 93       	push	r16
+ 172:	1f 93       	push	r17
+ 174:	cf 93       	push	r28
+ 176:	df 93       	push	r29
+
+
+	main_init();
+ 178:	0e 94 5f 00 	call	0xbe	; 0xbe <main_init>
+		sbi(PORTB,2);   cbi(PORTB,3);
+
+		break;
+	
+		case 'C':
+		count=100;
+ 17c:	c4 e6       	ldi	r28, 0x64	; 100
+ 17e:	d0 e0       	ldi	r29, 0x00	; 0
+		{
+		
+	
+		case 'A':
+		
+		OCR1C=700;
+ 180:	0c eb       	ldi	r16, 0xBC	; 188
+ 182:	12 e0       	ldi	r17, 0x02	; 2
+		count=45;
+ 184:	9d e2       	ldi	r25, 0x2D	; 45
+ 186:	e9 2e       	mov	r14, r25
+ 188:	f1 2c       	mov	r15, r1
+		break;
+		
+		
+		case 'B':
+		count=count+5;
+		OCR1C=400;
+ 18a:	80 e9       	ldi	r24, 0x90	; 144
+ 18c:	c8 2e       	mov	r12, r24
+ 18e:	81 e0       	ldi	r24, 0x01	; 1
+ 190:	d8 2e       	mov	r13, r24
+	while(1)
+	{                                    //키보드로부터 데이터를 수신
+
+		
+
+		switch(Uart_Getch(1))
+ 192:	81 e0       	ldi	r24, 0x01	; 1
+ 194:	0e 94 a2 00 	call	0x144	; 0x144 <Uart_Getch>
+ 198:	82 34       	cpi	r24, 0x42	; 66
+ 19a:	69 f1       	breq	.+90     	; 0x1f6 <main+0x8e>
+ 19c:	83 34       	cpi	r24, 0x43	; 67
+ 19e:	09 f4       	brne	.+2      	; 0x1a2 <main+0x3a>
+ 1a0:	56 c0       	rjmp	.+172    	; 0x24e <main+0xe6>
+ 1a2:	81 34       	cpi	r24, 0x41	; 65
+ 1a4:	b1 f7       	brne	.-20     	; 0x192 <main+0x2a>
+		{
+		
+	
+		case 'A':
+		
+		OCR1C=700;
+ 1a6:	10 93 79 00 	sts	0x0079, r17
+ 1aa:	00 93 78 00 	sts	0x0078, r16
+		count=45;
+ 1ae:	f0 92 01 01 	sts	0x0101, r15
+ 1b2:	e0 92 00 01 	sts	0x0100, r14
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1b6:	8f ef       	ldi	r24, 0xFF	; 255
+ 1b8:	93 ed       	ldi	r25, 0xD3	; 211
+ 1ba:	a0 e3       	ldi	r26, 0x30	; 48
+ 1bc:	81 50       	subi	r24, 0x01	; 1
+ 1be:	90 40       	sbci	r25, 0x00	; 0
+ 1c0:	a0 40       	sbci	r26, 0x00	; 0
+ 1c2:	e1 f7       	brne	.-8      	; 0x1bc <main+0x54>
+ 1c4:	00 c0       	rjmp	.+0      	; 0x1c6 <main+0x5e>
+ 1c6:	00 00       	nop
+		_delay_ms(1000);
+		Uart_Putch(1, 'A');
+ 1c8:	81 e0       	ldi	r24, 0x01	; 1
+ 1ca:	61 e4       	ldi	r22, 0x41	; 65
+ 1cc:	0e 94 92 00 	call	0x124	; 0x124 <Uart_Putch>
+		Uart_Putch(1, count);
+ 1d0:	81 e0       	ldi	r24, 0x01	; 1
+ 1d2:	60 91 00 01 	lds	r22, 0x0100
+ 1d6:	0e 94 92 00 	call	0x124	; 0x124 <Uart_Putch>
+ 1da:	8f ef       	ldi	r24, 0xFF	; 255
+ 1dc:	93 ed       	ldi	r25, 0xD3	; 211
+ 1de:	a0 e3       	ldi	r26, 0x30	; 48
+ 1e0:	81 50       	subi	r24, 0x01	; 1
+ 1e2:	90 40       	sbci	r25, 0x00	; 0
+ 1e4:	a0 40       	sbci	r26, 0x00	; 0
+ 1e6:	e1 f7       	brne	.-8      	; 0x1e0 <main+0x78>
+ 1e8:	00 c0       	rjmp	.+0      	; 0x1ea <main+0x82>
+ 1ea:	00 00       	nop
+		_delay_ms(1000);
+		sbi(PORTB,0);   cbi(PORTB,1);//왼쪽 dc정
+ 1ec:	c0 9a       	sbi	0x18, 0	; 24
+ 1ee:	c1 98       	cbi	0x18, 1	; 24
+		sbi(PORTB,3);   cbi(PORTB,2);//오른쪽 dc정
+ 1f0:	c3 9a       	sbi	0x18, 3	; 24
+ 1f2:	c2 98       	cbi	0x18, 2	; 24
+		break;
+ 1f4:	ce cf       	rjmp	.-100    	; 0x192 <main+0x2a>
+		
+		
+		case 'B':
+		count=count+5;
+ 1f6:	80 91 00 01 	lds	r24, 0x0100
+ 1fa:	90 91 01 01 	lds	r25, 0x0101
+ 1fe:	05 96       	adiw	r24, 0x05	; 5
+ 200:	90 93 01 01 	sts	0x0101, r25
+ 204:	80 93 00 01 	sts	0x0100, r24
+		OCR1C=400;
+ 208:	d0 92 79 00 	sts	0x0079, r13
+ 20c:	c0 92 78 00 	sts	0x0078, r12
+ 210:	8f ef       	ldi	r24, 0xFF	; 255
+ 212:	93 ed       	ldi	r25, 0xD3	; 211
+ 214:	a0 e3       	ldi	r26, 0x30	; 48
+ 216:	81 50       	subi	r24, 0x01	; 1
+ 218:	90 40       	sbci	r25, 0x00	; 0
+ 21a:	a0 40       	sbci	r26, 0x00	; 0
+ 21c:	e1 f7       	brne	.-8      	; 0x216 <main+0xae>
+ 21e:	00 c0       	rjmp	.+0      	; 0x220 <main+0xb8>
+ 220:	00 00       	nop
+		_delay_ms(1000);
+		Uart_Putch(1, 'B');
+ 222:	81 e0       	ldi	r24, 0x01	; 1
+ 224:	62 e4       	ldi	r22, 0x42	; 66
+ 226:	0e 94 92 00 	call	0x124	; 0x124 <Uart_Putch>
+		Uart_Putch(1, count);
+ 22a:	81 e0       	ldi	r24, 0x01	; 1
+ 22c:	60 91 00 01 	lds	r22, 0x0100
+ 230:	0e 94 92 00 	call	0x124	; 0x124 <Uart_Putch>
+ 234:	8f ef       	ldi	r24, 0xFF	; 255
+ 236:	93 ed       	ldi	r25, 0xD3	; 211
+ 238:	a0 e3       	ldi	r26, 0x30	; 48
+ 23a:	81 50       	subi	r24, 0x01	; 1
+ 23c:	90 40       	sbci	r25, 0x00	; 0
+ 23e:	a0 40       	sbci	r26, 0x00	; 0
+ 240:	e1 f7       	brne	.-8      	; 0x23a <main+0xd2>
+ 242:	00 c0       	rjmp	.+0      	; 0x244 <main+0xdc>
+ 244:	00 00       	nop
+		_delay_ms(1000);
+		sbi(PORTB,1);   cbi(PORTB,0);// dc 역
+ 246:	c1 9a       	sbi	0x18, 1	; 24
+ 248:	c0 98       	cbi	0x18, 0	; 24
+		sbi(PORTB,2);   cbi(PORTB,3);
+ 24a:	c2 9a       	sbi	0x18, 2	; 24
+ 24c:	1d c0       	rjmp	.+58     	; 0x288 <main+0x120>
+
+		break;
+	
+		case 'C':
+		count=100;
+ 24e:	d0 93 01 01 	sts	0x0101, r29
+ 252:	c0 93 00 01 	sts	0x0100, r28
+
+		OCR1C=count;
+ 256:	d0 93 79 00 	sts	0x0079, r29
+ 25a:	c0 93 78 00 	sts	0x0078, r28
+
+		Uart_Putch(1, 'C');
+ 25e:	81 e0       	ldi	r24, 0x01	; 1
+ 260:	63 e4       	ldi	r22, 0x43	; 67
+ 262:	0e 94 92 00 	call	0x124	; 0x124 <Uart_Putch>
+		Uart_Putch(1, count);
+ 266:	81 e0       	ldi	r24, 0x01	; 1
+ 268:	60 91 00 01 	lds	r22, 0x0100
+ 26c:	0e 94 92 00 	call	0x124	; 0x124 <Uart_Putch>
+ 270:	8f ef       	ldi	r24, 0xFF	; 255
+ 272:	93 ed       	ldi	r25, 0xD3	; 211
+ 274:	a0 e3       	ldi	r26, 0x30	; 48
+ 276:	81 50       	subi	r24, 0x01	; 1
+ 278:	90 40       	sbci	r25, 0x00	; 0
+ 27a:	a0 40       	sbci	r26, 0x00	; 0
+ 27c:	e1 f7       	brne	.-8      	; 0x276 <main+0x10e>
+ 27e:	00 c0       	rjmp	.+0      	; 0x280 <main+0x118>
+ 280:	00 00       	nop
+		_delay_ms(1000);
+		cbi(PORTB,1);   cbi(PORTB,0);// dc중지
+ 282:	c1 98       	cbi	0x18, 1	; 24
+ 284:	c0 98       	cbi	0x18, 0	; 24
+		cbi(PORTB,2);   cbi(PORTB,3);
+ 286:	c2 98       	cbi	0x18, 2	; 24
+ 288:	c3 98       	cbi	0x18, 3	; 24
+ 28a:	83 cf       	rjmp	.-250    	; 0x192 <main+0x2a>
+
+0000028c <_exit>:
+ 28c:	f8 94       	cli
+
+0000028e <__stop_program>:
+ 28e:	ff cf       	rjmp	.-2      	; 0x28e <__stop_program>

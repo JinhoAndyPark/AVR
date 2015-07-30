@@ -1,0 +1,324 @@
+
+text_lcd.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000e  00800100  000001c2  00000236  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001c2  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .stab         000006cc  00000000  00000000  00000244  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  00000910  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000020  00000000  00000000  00000995  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_pubnames 0000004a  00000000  00000000  000009b5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000003ad  00000000  00000000  000009ff  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000001a1  00000000  00000000  00000dac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000002c8  00000000  00000000  00000f4d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000060  00000000  00000000  00001218  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000110  00000000  00000000  00001278  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000000ae  00000000  00000000  00001388  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_pubtypes 00000040  00000000  00000000  00001436  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   8:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  10:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  14:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  24:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  34:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  38:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  3c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  40:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  44:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  48:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  4c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  50:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  54:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  58:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  5c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  60:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  68:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  6c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  70:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  74:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  78:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  7c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  80:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  84:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  88:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e2 ec       	ldi	r30, 0xC2	; 194
+  a0:	f1 e0       	ldi	r31, 0x01	; 1
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	ae 30       	cpi	r26, 0x0E	; 14
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	0e 94 ba 00 	call	0x174	; 0x174 <main>
+  b6:	0c 94 df 00 	jmp	0x1be	; 0x1be <_exit>
+
+000000ba <__bad_interrupt>:
+  ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000be <lcd_iw>:
+typedef unsigned char U08;
+
+
+void lcd_iw(U08 inst) // LCD 명령출력함수.
+{
+	PORTG = 0x04; // LCD를명령쓰기모드로설정
+  be:	e5 e6       	ldi	r30, 0x65	; 101
+  c0:	f0 e0       	ldi	r31, 0x00	; 0
+  c2:	24 e0       	ldi	r18, 0x04	; 4
+  c4:	20 83       	st	Z, r18
+	PORTD = inst & 0xf0; // 명령어상위4비트전송
+  c6:	98 2f       	mov	r25, r24
+  c8:	90 7f       	andi	r25, 0xF0	; 240
+  ca:	92 bb       	out	0x12, r25	; 18
+	PORTG &= 0xfb; // LCD Disable (E=0)
+  cc:	90 81       	ld	r25, Z
+  ce:	9b 7f       	andi	r25, 0xFB	; 251
+  d0:	90 83       	st	Z, r25
+	PORTG = 0x04;
+  d2:	20 83       	st	Z, r18
+	PORTD = inst << 4; // 명령어하위4비트전송
+  d4:	82 95       	swap	r24
+  d6:	80 7f       	andi	r24, 0xF0	; 240
+  d8:	82 bb       	out	0x12, r24	; 18
+	PORTG &= 0xfb; // LCD Disable
+  da:	80 81       	ld	r24, Z
+  dc:	8b 7f       	andi	r24, 0xFB	; 251
+  de:	80 83       	st	Z, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  e0:	8f e3       	ldi	r24, 0x3F	; 63
+  e2:	9f e1       	ldi	r25, 0x1F	; 31
+  e4:	01 97       	sbiw	r24, 0x01	; 1
+  e6:	f1 f7       	brne	.-4      	; 0xe4 <lcd_iw+0x26>
+  e8:	00 c0       	rjmp	.+0      	; 0xea <lcd_iw+0x2c>
+  ea:	00 00       	nop
+	_delay_ms(2);
+}
+  ec:	08 95       	ret
+
+000000ee <lcd_dw>:
+void lcd_dw(U08 dw) // LCD 데이터출력함수.
+{
+	PORTG = 0x05; // LCD를데이터쓰기모드로설정
+  ee:	e5 e6       	ldi	r30, 0x65	; 101
+  f0:	f0 e0       	ldi	r31, 0x00	; 0
+  f2:	25 e0       	ldi	r18, 0x05	; 5
+  f4:	20 83       	st	Z, r18
+	PORTD = dw & 0xf0; // 데이터상위4비트전송	6,5,4, 핀에 101
+  f6:	98 2f       	mov	r25, r24
+  f8:	90 7f       	andi	r25, 0xF0	; 240
+  fa:	92 bb       	out	0x12, r25	; 18
+	PORTG &= 0xfb; // LCD Disable (E=0)
+  fc:	90 81       	ld	r25, Z
+  fe:	9b 7f       	andi	r25, 0xFB	; 251
+ 100:	90 83       	st	Z, r25
+	PORTG = 0x05;
+ 102:	20 83       	st	Z, r18
+	PORTD = dw << 4; // 데이터하위4비트전송
+ 104:	82 95       	swap	r24
+ 106:	80 7f       	andi	r24, 0xF0	; 240
+ 108:	82 bb       	out	0x12, r24	; 18
+	PORTG &= 0xfb;
+ 10a:	80 81       	ld	r24, Z
+ 10c:	8b 7f       	andi	r24, 0xFB	; 251
+ 10e:	80 83       	st	Z, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 110:	85 ed       	ldi	r24, 0xD5	; 213
+ 112:	8a 95       	dec	r24
+ 114:	f1 f7       	brne	.-4      	; 0x112 <lcd_dw+0x24>
+ 116:	00 00       	nop
+	_delay_us(40);
+}
+ 118:	08 95       	ret
+
+0000011a <init_lcd>:
+void init_lcd(void) // LCD 초기화
+{
+	lcd_iw(0x20);
+ 11a:	80 e2       	ldi	r24, 0x20	; 32
+ 11c:	0e 94 5f 00 	call	0xbe	; 0xbe <lcd_iw>
+	lcd_iw(0x28); // FUNCTION SET	2행
+ 120:	88 e2       	ldi	r24, 0x28	; 40
+ 122:	0e 94 5f 00 	call	0xbe	; 0xbe <lcd_iw>
+	lcd_iw(0x06); // ENTRY MODE 	어드레드+1
+ 126:	86 e0       	ldi	r24, 0x06	; 6
+ 128:	0e 94 5f 00 	call	0xbe	; 0xbe <lcd_iw>
+	lcd_iw(0x0c); // DISPLAY ON 	lcd키고 커서점멸off
+ 12c:	8c e0       	ldi	r24, 0x0C	; 12
+ 12e:	0e 94 5f 00 	call	0xbe	; 0xbe <lcd_iw>
+	lcd_iw(0x01); // ALL CLEAR
+ 132:	81 e0       	ldi	r24, 0x01	; 1
+ 134:	0e 94 5f 00 	call	0xbe	; 0xbe <lcd_iw>
+}
+ 138:	08 95       	ret
+
+0000013a <lcd_str>:
+void lcd_str(char *str) // 문자열출력함수.
+{
+ 13a:	ef 92       	push	r14
+ 13c:	ff 92       	push	r15
+ 13e:	cf 93       	push	r28
+ 140:	df 93       	push	r29
+	U08 i;
+	while(*str){		//while(null=0) 이라서 멈침 while(1)만 무한루프가 아니라 while(2,3,4~~~xxx)도 무한루프
+	lcd_dw(*str++);
+ 142:	e8 2e       	mov	r14, r24
+ 144:	e7 01       	movw	r28, r14
+ 146:	7e 01       	movw	r14, r28
+ 148:	f9 2e       	mov	r15, r25
+ 14a:	e7 01       	movw	r28, r14
+	lcd_iw(0x01); // ALL CLEAR
+}
+void lcd_str(char *str) // 문자열출력함수.
+{
+	U08 i;
+	while(*str){		//while(null=0) 이라서 멈침 while(1)만 무한루프가 아니라 while(2,3,4~~~xxx)도 무한루프
+ 14c:	0b c0       	rjmp	.+22     	; 0x164 <lcd_str+0x2a>
+	lcd_dw(*str++);
+ 14e:	0e 94 77 00 	call	0xee	; 0xee <lcd_dw>
+ 152:	8a e0       	ldi	r24, 0x0A	; 10
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 154:	ef e3       	ldi	r30, 0x3F	; 63
+ 156:	fc e9       	ldi	r31, 0x9C	; 156
+ 158:	31 97       	sbiw	r30, 0x01	; 1
+ 15a:	f1 f7       	brne	.-4      	; 0x158 <lcd_str+0x1e>
+ 15c:	00 c0       	rjmp	.+0      	; 0x15e <lcd_str+0x24>
+ 15e:	00 00       	nop
+ 160:	81 50       	subi	r24, 0x01	; 1
+	for(i=0; i<10; i++)
+ 162:	c1 f7       	brne	.-16     	; 0x154 <lcd_str+0x1a>
+	lcd_iw(0x01); // ALL CLEAR
+}
+void lcd_str(char *str) // 문자열출력함수.
+{
+	U08 i;
+	while(*str){		//while(null=0) 이라서 멈침 while(1)만 무한루프가 아니라 while(2,3,4~~~xxx)도 무한루프
+ 164:	89 91       	ld	r24, Y+
+ 166:	88 23       	and	r24, r24
+ 168:	91 f7       	brne	.-28     	; 0x14e <lcd_str+0x14>
+	lcd_dw(*str++);
+	for(i=0; i<10; i++)
+	_delay_ms(10); // 시간지연.
+}
+}
+ 16a:	df 91       	pop	r29
+ 16c:	cf 91       	pop	r28
+ 16e:	ff 90       	pop	r15
+ 170:	ef 90       	pop	r14
+ 172:	08 95       	ret
+
+00000174 <main>:
+int main(void)
+{
+U08 i;
+U08 *str1="<SSSS>";
+U08 *str2="<YYYY>";
+DDRD = 0xf0; //포트D 상위4비트를출력으로설정
+ 174:	80 ef       	ldi	r24, 0xF0	; 240
+ 176:	81 bb       	out	0x11, r24	; 17
+DDRG = 0x07; //포트G 하위3비트를출력으로설정
+ 178:	87 e0       	ldi	r24, 0x07	; 7
+ 17a:	80 93 64 00 	sts	0x0064, r24
+init_lcd();
+ 17e:	0e 94 8d 00 	call	0x11a	; 0x11a <init_lcd>
+while(1)
+
+{lcd_str(str1); // str1 문자열출력
+ 182:	80 e0       	ldi	r24, 0x00	; 0
+ 184:	91 e0       	ldi	r25, 0x01	; 1
+ 186:	0e 94 9d 00 	call	0x13a	; 0x13a <lcd_str>
+lcd_iw(0xc0); // 커서를2번째줄첫번째칸으로이동
+ 18a:	80 ec       	ldi	r24, 0xC0	; 192
+ 18c:	0e 94 5f 00 	call	0xbe	; 0xbe <lcd_iw>
+
+lcd_str(str2); for(i=0; i<100; i++) _delay_ms(10);
+ 190:	87 e0       	ldi	r24, 0x07	; 7
+ 192:	91 e0       	ldi	r25, 0x01	; 1
+ 194:	0e 94 9d 00 	call	0x13a	; 0x13a <lcd_str>
+ 198:	84 e6       	ldi	r24, 0x64	; 100
+ 19a:	af e3       	ldi	r26, 0x3F	; 63
+ 19c:	bc e9       	ldi	r27, 0x9C	; 156
+ 19e:	11 97       	sbiw	r26, 0x01	; 1
+ 1a0:	f1 f7       	brne	.-4      	; 0x19e <main+0x2a>
+ 1a2:	00 c0       	rjmp	.+0      	; 0x1a4 <main+0x30>
+ 1a4:	00 00       	nop
+ 1a6:	81 50       	subi	r24, 0x01	; 1
+ 1a8:	c1 f7       	brne	.-16     	; 0x19a <main+0x26>
+ 1aa:	8f ef       	ldi	r24, 0xFF	; 255
+ 1ac:	93 ed       	ldi	r25, 0xD3	; 211
+ 1ae:	a0 e3       	ldi	r26, 0x30	; 48
+ 1b0:	81 50       	subi	r24, 0x01	; 1
+ 1b2:	90 40       	sbci	r25, 0x00	; 0
+ 1b4:	a0 40       	sbci	r26, 0x00	; 0
+ 1b6:	e1 f7       	brne	.-8      	; 0x1b0 <main+0x3c>
+ 1b8:	00 c0       	rjmp	.+0      	; 0x1ba <main+0x46>
+ 1ba:	00 00       	nop
+lcd_dw(' '); for(i=0; i<10; i++) _delay_ms(10);
+lcd_dw(0xe2); for(i=0; i<10; i++) _delay_ms(10);
+lcd_str(str2); for(i=0; i<100; i++) _delay_ms(10);
+lcd_iw(0x01); for(i=0; i<10; i++) _delay_ms(10);
+*/
+}
+ 1bc:	e2 cf       	rjmp	.-60     	; 0x182 <main+0xe>
+
+000001be <_exit>:
+ 1be:	f8 94       	cli
+
+000001c0 <__stop_program>:
+ 1c0:	ff cf       	rjmp	.-2      	; 0x1c0 <__stop_program>

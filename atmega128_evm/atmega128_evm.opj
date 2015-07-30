@@ -1,0 +1,52 @@
+(ExpressProject "atmega128_evm"
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\atmega128_evm.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (PartMRUSelector
+    ("MOTOR AC"
+      (FullPartName "MOTOR AC.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\ELECTROMECHANICAL.OLB")
+      (DeviceIndex "0"))
+    (L298
+      (FullPartName "L298.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\MISC.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 3"
+      (FullPartName "HEADER 3.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("RESISTOR VAR"
+      (FullPartName "RESISTOR VAR.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 4"
+      (FullPartName "HEADER 4.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("SW PUSHBUTTON-SPST-2/SM"
+      (FullPartName "SW PUSHBUTTON-SPST-2/SM.Normal")
+      (LibraryName "C:\ORCAD\ORCAD_16.2\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "C:\Prj\atmega128_evm\atmega128_evm.dsn")
+      (Path "Design Resources" "C:\Prj\atmega128_evm\atmega128_evm.dsn"
+         "SCHEMATIC1")
+      (Select "Design Resources" "C:\Prj\atmega128_evm\atmega128_evm.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -4 -23 0 200 0 382"))
+      (Tab 0))))

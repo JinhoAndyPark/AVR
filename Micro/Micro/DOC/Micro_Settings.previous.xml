@@ -1,0 +1,346 @@
+<PE_PROJECT_SETTINGS_DOCUMENTATION>
+  <PE_product_version v="version 3.00 for Freescale 56800/E family"/>
+  <PE_core_version v="Processor Expert Version 0435"/>
+
+  <CPU_Bean name="Cpu" type="56F8257">
+    <Enabled v="Y"/>
+
+    <Properties>
+      <Component_name v="Cpu"/>
+      <CPU_type v="MC56F8257"/>
+      <group name="Clock settings">
+        <Oscillator_frequency__MHz_ v="8"/>
+        <Master_clk__frequency__MHz_ v="8"/>
+        <enumgroup name="Clock source" v="On-chip relaxation oscillator">
+        </enumgroup>
+      </group>
+      <Initialization_priority v="minimal priority"/>
+      <Saturation_mode v="Disabled"/>
+      <boolgroup name="Initialize shadow registers" v="no" />
+      <enumgroup name="Initialize unused I/O pins" v="no initialization">
+      </enumgroup>
+      <group name="Internal peripherals">
+        <group name="SIM module">
+          <Wait_disable_mode v="Enabled"/>
+          <Stop_disable_mode v="Enabled"/>
+          <OnCE_clock_to_core v="Enabled when core TAP is enabled"/>
+          <CLKO_0_select v="Continuous system clock"/>
+          <boolgroup name="CLKOUT_0 mode" v="Disabled" />
+          <CLKO_1_select v="Continuous system clock"/>
+          <boolgroup name="CLKOUT_1 mode" v="Disabled" />
+        </group>
+        <boolgroup name="Flash security &amp; protection" v="Disabled" />
+        <group name="Peripheral clocks">
+          <TA0_peripheral_clock v="Disabled"/>
+          <TA0_peripheral_clock_in_stop_mode v="Disabled"/>
+          <TA1_peripheral_clock v="Disabled"/>
+          <TA1_peripheral_clock_in_stop_mode v="Disabled"/>
+          <TA2_peripheral_clock v="Disabled"/>
+          <TA2_peripheral_clock_in_stop_mode v="Disabled"/>
+          <TA3_peripheral_clock v="Disabled"/>
+          <TA3_peripheral_clock_in_stop_mode v="Disabled"/>
+          <TB0_peripheral_clock v="Disabled"/>
+          <TB0_peripheral_clock_in_stop_mode v="Disabled"/>
+          <TB1_peripheral_clock v="Disabled"/>
+          <TB1_peripheral_clock_in_stop_mode v="Disabled"/>
+          <TB2_peripheral_clock v="Disabled"/>
+          <TB2_peripheral_clock_in_stop_mode v="Disabled"/>
+          <TB3_peripheral_clock v="Disabled"/>
+          <TB3_peripheral_clock_in_stop_mode v="Disabled"/>
+          <ADC_peripheral_clock v="Disabled"/>
+          <ADC_peripheral_clock_in_stop_mode v="Disabled"/>
+          <GPIOA_peripheral_clock v="Disabled"/>
+          <GPIOA_peripheral_clock_in_stop_mode v="Disabled"/>
+          <GPIOB_peripheral_clock v="Enabled"/>
+          <GPIOB_peripheral_clock_in_stop_mode v="Disabled"/>
+          <GPIOC_peripheral_clock v="Disabled"/>
+          <GPIOC_peripheral_clock_in_stop_mode v="Disabled"/>
+          <GPIOD_peripheral_clock v="Disabled"/>
+          <GPIOD_peripheral_clock_in_stop_mode v="Disabled"/>
+          <GPIOE_peripheral_clock v="Disabled"/>
+          <GPIOE_peripheral_clock_in_stop_mode v="Disabled"/>
+          <GPIOF_peripheral_clock v="Disabled"/>
+          <GPIOF_peripheral_clock_in_stop_mode v="Disabled"/>
+          <DAC_peripheral_clock v="Disabled"/>
+          <DAC_peripheral_clock_in_stop_mode v="Disabled"/>
+          <HSCMPA_peripheral_clock v="Disabled"/>
+          <HSCMPA_peripheral_clock_in_stop_mode v="Disabled"/>
+          <HSCMPB_peripheral_clock v="Disabled"/>
+          <HSCMPB_peripheral_clock_in_stop_mode v="Disabled"/>
+          <HSCMPC_peripheral_clock v="Disabled"/>
+          <HSCMPC_peripheral_clock_in_stop_mode v="Disabled"/>
+          <QSCI0_peripheral_clock v="Disabled"/>
+          <QSCI0_peripheral_clock_in_stop_mode v="Disabled"/>
+          <QSCI1_peripheral_clock v="Disabled"/>
+          <QSCI1_peripheral_clock_in_stop_mode v="Disabled"/>
+          <QSPI0_peripheral_clock v="Disabled"/>
+          <QSPI0_peripheral_clock_in_stop_mode v="Disabled"/>
+          <I2C0_peripheral_clock v="Disabled"/>
+          <I2C0_peripheral_clock_in_stop_mode v="Disabled"/>
+          <I2C1_peripheral_clock v="Disabled"/>
+          <I2C1_peripheral_clock_in_stop_mode v="Disabled"/>
+          <CRC_peripheral_clock v="Disabled"/>
+          <CRC_peripheral_clock_in_stop_mode v="Disabled"/>
+          <REFA_peripheral_clock v="Disabled"/>
+          <REFA_peripheral_clock_in_stop_mode v="Disabled"/>
+          <REFB_peripheral_clock v="Disabled"/>
+          <REFB_peripheral_clock_in_stop_mode v="Disabled"/>
+          <REFC_peripheral_clock v="Disabled"/>
+          <REFC_peripheral_clock_in_stop_mode v="Disabled"/>
+          <HFM_peripheral_clock v="Enabled"/>
+          <MSCAN_peripheral_clock v="Enabled"/>
+          <MSCAN_peripheral_clock_in_stop_mode v="Disabled"/>
+          <PWM_Channel_0_peripheral_clock v="Disabled"/>
+          <PWM_channel_0_peripheral_clock_in_stop_mode v="Disabled"/>
+          <PWM_Channel_1_peripheral_clock v="Disabled"/>
+          <PWM_channel_1_peripheral_clock_in_stop_mode v="Disabled"/>
+          <PWM_Channel_2_peripheral_clock v="Disabled"/>
+          <PWM_channel_2_peripheral_clock_in_stop_mode v="Disabled"/>
+          <PWM_Channel_3_peripheral_clock v="Disabled"/>
+          <PWM_channel_3_peripheral_clock_in_stop_mode v="Disabled"/>
+        </group>
+        <group name="Peripheral clock rates">
+          <TMRA_clock_rate v="Auto select"/>
+          <TMRB_clock_rate v="Auto select"/>
+          <QSCI0_clock_rate v="Auto select"/>
+          <QSCI1_clock_rate v="Auto select"/>
+        </group>
+        <group name="I/O module">
+          <group name="GPIOA">
+            <Drive_strength_for_GPIOA0 v="Low"/>
+            <Drive_strength_for_GPIOA1 v="Low"/>
+            <Drive_strength_for_GPIOA2 v="Low"/>
+            <Drive_strength_for_GPIOA3 v="Low"/>
+            <Drive_strength_for_GPIOA4 v="Low"/>
+            <Drive_strength_for_GPIOA5 v="Low"/>
+            <Drive_strength_for_GPIOA6 v="Low"/>
+            <Drive_strength_for_GPIOA7 v="Low"/>
+          </group>
+          <group name="GPIOB">
+            <Drive_strength_for_GPIOB0 v="Low"/>
+            <Drive_strength_for_GPIOB1 v="Low"/>
+            <Drive_strength_for_GPIOB2 v="Low"/>
+            <Drive_strength_for_GPIOB3 v="Low"/>
+            <Drive_strength_for_GPIOB4 v="Low"/>
+            <Drive_strength_for_GPIOB5 v="Low"/>
+            <Drive_strength_for_GPIOB6 v="Low"/>
+            <Drive_strength_for_GPIOB7 v="Low"/>
+          </group>
+          <group name="GPIOC">
+            <group name="GPIOC_Low">
+              <Drive_strength_for_GPIOC0 v="Low"/>
+              <Drive_strength_for_GPIOC1 v="Low"/>
+              <Drive_strength_for_GPIOC2 v="Low"/>
+              <Drive_strength_for_GPIOC3 v="Low"/>
+              <Drive_strength_for_GPIOC4 v="Low"/>
+              <Drive_strength_for_GPIOC5 v="Low"/>
+              <Drive_strength_for_GPIOC6 v="Low"/>
+              <Drive_strength_for_GPIOC7 v="Low"/>
+            </group>
+            <group name="GPIOC_High">
+              <Drive_strength_for_GPIOC8 v="Low"/>
+              <Drive_strength_for_GPIOC9 v="Low"/>
+              <Drive_strength_for_GPIOC10 v="Low"/>
+              <Drive_strength_for_GPIOC11 v="Low"/>
+              <Drive_strength_for_GPIOC12 v="Low"/>
+              <Drive_strength_for_GPIOC13 v="Low"/>
+              <Drive_strength_for_GPIOC14 v="Low"/>
+              <Drive_strength_for_GPIOC15 v="Low"/>
+            </group>
+          </group>
+          <group name="GPIOD">
+            <Drive_strength_for_GPIOD0 v="Low"/>
+            <Drive_strength_for_GPIOD1 v="Low"/>
+            <Drive_strength_for_GPIOD2 v="Low"/>
+            <Drive_strength_for_GPIOD3 v="Low"/>
+            <Drive_strength_for_GPIOD4 v="Low"/>
+          </group>
+          <group name="GPIOE">
+            <Drive_strength_for_GPIOE0 v="Low"/>
+            <Drive_strength_for_GPIOE1 v="Low"/>
+            <Drive_strength_for_GPIOE2 v="Low"/>
+            <Drive_strength_for_GPIOE3 v="Low"/>
+            <Drive_strength_for_GPIOE4 v="Low"/>
+            <Drive_strength_for_GPIOE5 v="Low"/>
+            <Drive_strength_for_GPIOE6 v="Low"/>
+            <Drive_strength_for_GPIOE7 v="Low"/>
+          </group>
+          <group name="GPIOF">
+            <group name="GPIOF_Low">
+              <Drive_strength_for_GPIOF0 v="Low"/>
+              <Drive_strength_for_GPIOF1 v="Low"/>
+              <Drive_strength_for_GPIOF2 v="Low"/>
+              <Drive_strength_for_GPIOF3 v="Low"/>
+              <Drive_strength_for_GPIOF4 v="Low"/>
+              <Drive_strength_for_GPIOF5 v="Low"/>
+              <Drive_strength_for_GPIOF6 v="Low"/>
+              <Drive_strength_for_GPIOF7 v="Low"/>
+            </group>
+            <group name="GPIOF_High">
+              <Drive_strength_for_GPIOF8 v="Low"/>
+            </group>
+          </group>
+        </group>
+      </group>
+      <group name="CPU interrupts">
+        <boolgroup name="Interrupt SW0" v="Disabled" />
+        <boolgroup name="Interrupt SW1" v="Disabled" />
+        <boolgroup name="Interrupt SW2" v="Disabled" />
+        <boolgroup name="Interrupt SW3" v="Disabled" />
+        <boolgroup name="Interrupt LP" v="Disabled" />
+        <boolgroup name="Interrupt PLL" v="Disabled" />
+        <boolgroup name="Interrupt LVI" v="Disabled" />
+        <boolgroup name="Interrupt Illegal Instruction" v="Disabled" />
+        <boolgroup name="Interrupt Misalign Access" v="Disabled" />
+        <boolgroup name="Interrupt HW Stack Overflow" v="Disabled" />
+      </group>
+      <group name="Enabled speed modes">
+        <boolgroup name="High speed mode" v="Enabled">
+          <System_clock__IP_Bus_ v="60"/>
+          <boolgroup name="PLL clock" v="Enabled">
+            <PLL_clock_frequency v="120"/>
+            <Enable_PLL_after_reset v="yes"/>
+          </boolgroup>
+        </boolgroup>
+        <boolgroup name="Low speed mode" v="Disabled" />
+        <boolgroup name="Slow speed mode" v="Disabled" />
+      </group>
+    </Properties>
+
+    <Methods>
+      <SetHighSpeed v="don&apos;t generate code"/>
+      <SetLowSpeed v="don&apos;t generate code"/>
+      <SetSlowSpeed v="don&apos;t generate code"/>
+      <GetSpeedMode v="don&apos;t generate code"/>
+      <EnableInt v="generate code"/>
+      <DisableInt v="generate code"/>
+      <GetResetSource v="don&apos;t generate code"/>
+      <SetWaitMode v="generate code"/>
+      <SetStopMode v="generate code"/>
+      <GetBusFreqHz v="don&apos;t generate code"/>
+      <OpenBackDoor v="don&apos;t generate code"/>
+      <InitShadowRegs v="don&apos;t generate code"/>
+      <Delay100US v="don&apos;t generate code"/>
+      <EnablePLL v="don&apos;t generate code"/>
+    </Methods>
+
+    <Events>
+      <Event_module_name v="Events"/>
+      <event name="OnReset" v="don&apos;t generate code" />
+      <event name="OnSwINT0" v="don&apos;t generate code" />
+      <event name="OnSwINT1" v="don&apos;t generate code" />
+      <event name="OnSwINT2" v="don&apos;t generate code" />
+      <event name="OnSwINT3" v="don&apos;t generate code" />
+      <event name="OnSwINTLP" v="don&apos;t generate code" />
+      <event name="OnPLLError" v="don&apos;t generate code" />
+      <event name="OnIllegalOpcode" v="don&apos;t generate code" />
+      <event name="OnMisalignData" v="don&apos;t generate code" />
+      <event name="OnHWStackError" v="don&apos;t generate code" />
+      <event name="OnLVI21" v="don&apos;t generate code" />
+      <event name="OnLVI27" v="don&apos;t generate code" />
+    </Events>
+    <Compiler v="CodeWarrior DSP C Compiler"/>
+
+    <CompilerProperties>
+      <Compiler v="CodeWarrior DSP C Compiler"/>
+      <PESL_support v="no"/>
+      <Unhandled_interrupts v="One handler for all"/>
+      <group name="User initialization">
+        <User_data_declarations>
+        </User_data_declarations>
+        <User_code_before_PE_initialization>
+        </User_code_before_PE_initialization>
+        <User_code_after_PE_initialization>
+        </User_code_after_PE_initialization>
+      </group>
+      <boolgroup name="Generate linker file" v="yes">
+        <pROM_xRAM_mode v="yes"/>
+        <Stack_size v="512"/>
+        <Heap_size v="256"/>
+        <list name="ROM/RAM Areas" v="3">
+          <group name="MemoryArea0">
+            <boolgroup name="ROM/RAM Area" v="Enabled">
+              <Name v=".p_Interrupts"/>
+              <Address v="0"/>
+              <Size v="134"/>
+              <Qualifier v="RWX"/>
+            </boolgroup>
+          </group>
+          <group name="MemoryArea1">
+            <boolgroup name="ROM/RAM Area" v="Enabled">
+              <Name v=".p_Code"/>
+              <Address v="134"/>
+              <Size v="32634"/>
+              <Qualifier v="RWX"/>
+            </boolgroup>
+          </group>
+          <group name="MemoryArea2">
+            <boolgroup name="ROM/RAM Area" v="Enabled">
+              <Name v=".x_Data"/>
+              <Address v="1"/>
+              <Size v="4095"/>
+              <Qualifier v="RW"/>
+            </boolgroup>
+          </group>
+        </list>
+      </boolgroup>
+      <list name="System paths " v="0">
+      </list>
+      <list name="User paths " v="0">
+      </list>
+      <list name="Libraries" v="0">
+      </list>
+      <list name="User directories" v="0">
+      </list>
+    </CompilerProperties>
+  </CPU_Bean>
+
+  <Bean name="Bits1" type="BitsIO">
+    <Enabled v="Y"/>
+
+    <Properties>
+      <Component_name v="Bits1"/>
+      <Port v="GPIOB"/>
+      <list name="Pins" v="2">
+        <group name="Pin0">
+          <Pin v="GPIOB6_ANB6_CMPB_M1"/>
+          <Pin_signal v=""/>
+        </group>
+        <group name="Pin1">
+          <Pin v="GPIOB7_ANB7_CMPB_M2"/>
+          <Pin_signal v=""/>
+        </group>
+      </list>
+      <Pull_resistor sel_value="no pull resistor" v="autoselected pull"/>
+      <Open_drain v="push-pull"/>
+      <Direction v="Input/Output"/>
+      <group name="Initialization">
+        <Init__direction v="Output"/>
+        <Init__value v="0"/>
+      </group>
+      <Safe_mode v="yes"/>
+      <Optimization_for v="speed"/>
+    </Properties>
+
+    <Methods>
+      <GetDir v="generate code"/>
+      <SetDir v="generate code"/>
+      <SetInput v="don&apos;t generate code"/>
+      <SetOutput v="don&apos;t generate code"/>
+      <GetVal v="generate code"/>
+      <PutVal v="generate code"/>
+      <GetBit v="generate code"/>
+      <PutBit v="generate code"/>
+      <SetBit v="generate code"/>
+      <ClrBit v="generate code"/>
+      <NegBit v="generate code"/>
+      <ConnectPin v="don&apos;t generate code"/>
+      <GetRawVal v="don&apos;t generate code"/>
+      <GetRawBit v="don&apos;t generate code"/>
+    </Methods>
+
+    <Events>
+    </Events>
+  </Bean>
+
+</PE_PROJECT_SETTINGS_DOCUMENTATION>

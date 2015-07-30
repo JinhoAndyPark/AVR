@@ -1,0 +1,15 @@
+---- Uart_Putch Matches (14 in 1 files) ----
+Main.c:void Uart_Putch(unsigned char Com, unsigned char PutData);
+Main.c:		Uart_Putch(1, 'A');
+Main.c:		Uart_Putch(1, count);
+Main.c:		Uart_Putch(1, 'B');
+Main.c:		Uart_Putch(1, count);
+Main.c:		Uart_Putch(0, 'C');
+Main.c:		Uart_Putch(0, count);
+Main.c:	Uart_Putch(1,1);
+Main.c:																	 //Uart_Putch(0,'A');
+Main.c:void Uart_Putch(unsigned char Com, unsigned char PutData)
+Main.c:	Uart_Putch(1,TempData+48);					// 1000's place print
+Main.c:	Uart_Putch(1,TempData+48);					// 100's place print
+Main.c:	Uart_Putch(1,TempData+48);					// 10's place print
+Main.c:	Uart_Putch(1,TempData+48);					// 1's place print 
